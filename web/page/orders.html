@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>当当网订单管理页面</title>
+<script type="text/javascript" src="js/common.js" charset="gbk"></script>
+<script type="text/javascript" src="js/jquery-1.4.4.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+	$(document).ready(
+		function(){
+			$("#txtDateFrom").focus(
+			function(){
+				WdatePicker({
+					dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:"#F{$dp.$D('txtDateFrom')}"
+				})
+			});
+			$("#txtDateTo").focus(
+			function(){
+				WdatePicker({
+					dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:"#F{$dp.$D('txtDateTo')}"
+				})
+			});
+		}
+	);
+</script>
+
+<style type="text/css" media="screen">
+	@import url("css/global.css");
+	@import url("css/menu.css");
+	@import url("css/orders.css");
+</style>
+</head>
+
+<body>
+	<!-- 公共菜单部分 -->
+    <div id="navigate">
+    	<div id="rang">
+        	<ul class="login">
+                <li>您好,&nbsp;
+                <a href="login.html">登录当当</a>&nbsp;&nbsp;
+                <a href="login.html">退出</a>
+                <a href="#">站内信</a>
+                </li>
+            </ul>
+            <ul class="content">
+            	<li><a href="#">联系我们</a></li>
+                <li><s class="search">&nbsp;</s><a href="#">搜索</a></li>
+                <li><a href="myself.html">我的当当</a></li>
+                <li><a href="orders.html">我的订单</a></li>
+                <li class="sc">
+                    <s class="shoppingCart">&nbsp;</s>
+                    <a href="cart.html">
+                    购物车&nbsp;<span id="mailNumber">(0)</span>
+                    </a>
+                </li>
+                <li>欢迎光临</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="logoBar">
+    	<div id="logo"></div>
+        <div id="circularMenu">
+            <div id="circularMenuTop">网上购物享当当</div>
+            <div id="circularMenuTitle">
+                <ul>
+                    <li><a href="books.html">首页</a></li>
+                    <li><a href="books.html">图书</a></li>
+                    <li><a href="#">百货</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a href="#">促销</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="search">
+            <s class="imgSearch">&nbsp;</s>
+            <input type="text" class="textSeatch" name="search"/>
+            <p class="btnSearch"></p>
+        </div>
+	</div>
+    
+    <div id="menu">
+   	  <div id="rang">
+        	<ul class="items">
+            	<li>小说</li>
+                <li>青春</li>
+                <li>历史</li>
+                <li>心理学</li>
+                <li>保健</li>
+                <li>少儿</li>
+                <li>外语</li>
+                <li class="img">考试<s></s></li>
+                <li>中小学教辅</li>
+                <li>图书畅销榜</li>
+                <li>新书热卖榜</li>
+                <li class="img">特价书<s></s></li>
+                <li>图书畅销</li>
+                <li>所有图书分类</li>
+                <li>精品套装图书</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 公共菜单部分 -->
+
+    <div id="orders">
+    	<div id="contextMenu">
+        您现在的位置：<a href="books.html">当当网</a> &gt; <a href="myself.html">我的当当</a> &gt; 我的订单
+        </div>
+        
+        <!-- 左侧订单 -->
+    	<div id="leftMenu">
+        	<ul class="root">
+            	<li><h3>订单管理</h3></li>
+                <li><a href="orders.html" class="selected">我的订单</a></li>
+                <li><a href="#">订单支付历史</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>我的商品</h3></li>
+                <li><a href="#">已购商品</a></li>
+                <li><a href="#">我的收藏</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>账户管理</h3></li>
+                <li><a href="#">礼券/礼品卡</a></li>
+                <li><a href="#">我的积分</a></li>
+                <li><a href="#">收货地址簿</a></li>
+                <li><a href="#">账户余额</a></li>
+                <li><a href="editown.html">编辑个人档案</a></li>
+                <li><a href="editmail.html">修改E-Mail地址</a></li>
+                <li><a href="editpwd.html">修改密码</a></li>
+                <li><a href="#">手机绑定</a></li>
+                <li><a href="#">站内信息</a></li>
+                <li><a href="#">我的问答</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>我的社区</h3></li>
+                <li><a href="#">我的评论/评价</a></li>
+                <li><a href="#">我的书架</a></li>
+                <li><a href="#">我的关注</a></li>
+                <li><a href="#">我的留言板</a></li>
+                <li><a href="#">我的书签</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>二手书交易管理</h3></li>
+           	</ul>
+        </div>
+
+   		<div id="pane">
+        	
+            <div id="condition">
+            	订单编号:&nbsp;<input type="text" name="ordid" id="txtOrdid" 
+                	class="txt" maxlength="10" size="20" />&nbsp;&nbsp;&nbsp;
+                消费金额:&nbsp;<input type="text" name="priceFrom" id="txtPriceFrom" 
+                	class="txt" maxlength="10" size="10" />&nbsp;～&nbsp;
+                    <input type="text" name="priceTo" id="txtPriceTo" 
+                	class="txt" maxlength="10" size="10" />&nbsp;&nbsp;&nbsp;
+                下单时间:&nbsp;<input type="text" name="dateFrom" id="txtDateFrom" 
+                	class="txt" maxlength="10" size="10" />&nbsp;～&nbsp;
+                    <input type="text" name="dateTo" id="txtDateTo" 
+                	class="txt" maxlength="10" size="10" />
+                <input type="button" name="query" class="btn" value=" 查 询 " />
+            </div>
+            
+        	<ul id="caption">
+            	<li><span>订单号</span></li>
+                <li><span>收货人</span></li>
+                <li><span>付款方式</span></li>
+                <li><span>订单总金额</span></li>
+                <li><span>订单状态</span></li>
+                <li><span>下单时间</span></li>
+                <li><span style="border:none;">操作</span></li>
+            </ul>
+            
+            <!-- 无订单时的显示内容-->
+            <!--
+            <div id="no_order_data">
+            	没有找到任何属于您的订单,当当网全场满70免运费 &nbsp;&nbsp;&nbsp;
+                <a href="books.html">去促销看看&gt;&gt;</a>
+               
+            </div>
+            -->
+            <!--显示订单信息-->
+            <ul class="tr">
+            	<li><a href="#">2011070001</a></li>
+                <li>关羽</li>
+                <li>货到付款</li>
+                <li>￥455.00</li>
+                <li>审核</li>
+                <li>2011-07-01</li>
+                <li><a href="#">取消</a></li>
+            </ul>
+            
+            <ul class="tr">
+            	<li><a href="#">2011070002</a></li>
+                <li>关平</li>
+                <li>货到付款</li>
+                <li>￥355.00</li>
+                <li>配货中</li>
+                <li>2011-07-01</li>
+                <li><a href="#">取消</a></li>
+            </ul>
+            
+            <ul class="tr">
+            	<li><a href="#">2011070003</a></li>
+                <li>关兴</li>
+                <li>网银支付</li>
+                <li>￥123.00</li>
+                <li>审核</li>
+                <li>2011-07-02</li>
+                <li>---</li>
+            </ul>
+            
+            <ul class="tr">
+            	<li><a href="#">2011070004</a></li>
+                <li>关索</li>
+                <li>银行汇款</li>
+                <li>￥323.00</li>
+                <li>审核</li>
+                <li>2011-07-03</li>
+                <li>---</li>
+            </ul>
+            
+            <ul class="tr">
+            	<li><a href="#">2011070005</a></li>
+                <li>关索</li>
+                <li>货到付款</li>
+                <li>￥890.00</li>
+                <li>客户取消</li>
+                <li>2011-07-15</li>
+                <li><a href="#">恢复订单</a></li>
+            </ul>
+            
+            <ul class="tr">
+            	<li><a href="#">2011070006</a></li>
+                <li>关索</li>
+                <li>货到付款</li>
+                <li>￥888.00</li>
+                <li>已发货</li>
+                <li>2011-07-21</li>
+                <li>---</li>
+            </ul>
+            
+            <ul class="tr">
+            	<li><a href="#">2011070007</a></li>
+                <li>关索</li>
+                <li>货到付款</li>
+                <li>￥451.00</li>
+                <li>交易成功</li>
+                <li>2011-07-28</li>
+                <li>---</li>
+            </ul>
+            
+        </div>
+    </div>
+</body>
+</html>

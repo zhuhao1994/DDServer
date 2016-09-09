@@ -1,0 +1,513 @@
+	@charset "utf-8";
+
+	#navigate {
+		position:relative;
+		right:0;
+		top:1px;
+		width:auto;
+		min-width:1050px;/*该数值保证菜单栏不管窗体如何变化，都不得小于该数值的长度*/
+		/*width:inherit;*/
+		height:25px;
+		line-height:16px;
+		top:0px;
+		left:0px;
+		margin:auto;
+		
+		background:transparent url(../img/list/menu.png) repeat-x 0px -45px;		
+		
+		/*字体继承*/
+	}
+	
+	#navigate #rang {
+		position:relative;
+		
+		width:900px;
+		height:25px;
+		margin:auto;
+		
+		/*字体继承,height:25px;*/
+		text-align:center;
+		
+		
+	}
+	
+	#navigate #rang .login {
+		float:left;
+		
+		width:300px;
+		height:25px;
+		padding:0px;
+		margin:0px;
+		
+		text-align:left;
+		/*字体继承*/
+		list-style:none;
+
+	}
+	
+	#navigate #rang .content {
+		float:right;
+		
+		width:600px;
+		height:25px;
+		padding:0px;
+		margin:0px;
+		
+		/*字体继承*/
+		list-style:none;
+	}
+	
+	#navigate #rang .login li{
+		float:left;
+		
+		width:300px;/*登录区默认宽100*3 = 300px，不得超过300*/
+		/*高度继承*/
+		padding-top:4px;/*该属性不能继承*/
+		
+		/*浮动层+inline可以让ul+li横排，inline-block,run-in ie6不支持*/
+		display:inline-block;
+		*display:inline;
+		*zoom:1		
+	}
+	
+	#navigate #rang .login .exit{
+		float:left;
+		
+		width:30px;/*登录区默认宽100*3 = 300px，不得超过300*/
+		/*高度继承*/
+		padding-top:4px;/*该属性不能继承*/
+		line-height:17px;
+		
+		/*浮动层+inline可以让ul+li横排，inline-block,run-in ie6不支持*/
+		display:inline-block;
+		*display:inline;
+	
+	}
+
+	
+	#navigate #rang .content li{
+		float:right;
+		
+		width:60px;/*菜单内容区默认宽度55*6 = 330px，不得超过600*/
+		*width:65px;/*菜单内容区默认宽度55*6 = 330px，不得超过600*/
+		/*高度继承*/
+		padding-top:4px;/*该属性不能继承*/
+		margin-right:5px;
+		
+		text-align:center;
+		/*浮动层+inline可以让ul+li横排，inline-block,run-in ie6不支持*/
+		display:inline-block;
+		*display:inline;
+		*zoom:1	
+	}
+
+	#navigate #rang .content .sc{
+		float:right;
+		
+		width:75px;
+		*width:80px;
+		
+		/*高度继承*/
+		padding-top:4px;/*该属性不能继承*/
+		margin-right:5px;
+		
+		text-align:center;
+		/*浮动层+inline可以让ul+li横排，inline-block,run-in ie6不支持*/
+		display:inline-block;
+		*display:inline;
+		*zoom:1	
+	}
+	
+	#navigate #rang .content li .search{
+		float:left;
+		
+		
+		width:12px;/*购物车图标：12px + 330px = 342px*/
+		/*高度继承*/
+		margin-left:5px;
+		
+		text-decoration:none;
+		display:inline;
+		/*x = -68px,y = -19px*/
+		background:transparent url(../img/list/menu.png) no-repeat -68px -19px;
+	}
+
+	#navigate #rang .content .sc .shoppingCart{
+		float:left;
+		width:13px;/*购物车图标：13px + 342px = 355px*/
+		/*高度继承*/
+		margin-left:5px;
+		
+		text-decoration:none;
+		display:inline;
+		
+		background:transparent url(../img/list/menu.png) no-repeat -103px -19px;
+	}
+	
+	#navigate a:link,#navigate a:visited{
+		color:#666;
+		text-decoration:none;
+	}
+	#navigate a:active,#navigate a:hover{
+		color:#666;
+		text-decoration:underline;
+	}
+	
+	#navigate #mailNumber{
+		color:red;
+		text-decoration:none;
+	}
+	
+	
+	#logoBar {
+		position:relative;
+		
+		width:1050px;
+		height:70px;
+		margin:auto;
+		
+		text-align:center;
+		
+	}
+	
+	#logoBar #logo{
+		float:left;
+		
+		width:150px;
+		height:70px;
+		margin:auto;
+		margin-left:50px;
+		*margin-left:10px;
+		
+		text-align:center;
+		background:transparent url(../img/list/ddnewhead_logo.gif) no-repeat top left;
+		
+	}
+	
+	#logoBar #circularMenu {
+		float:left;
+		
+		width:500x;/*150px + 50px(margin) + 500px = 700px 不超过1050px*/
+		
+		height:70px;
+		
+		margin:auto;
+		text-align:center;
+	}
+	
+	#logoBar #search {
+		float:left;
+		
+		width:314px;/*150px + 50px(margin) + 500px + 30px(margin) + 
+		              314px + 3px(border) + 3px(border) = 1050px 不超过1050px*/
+		
+		height:30px;
+		margin-top:32px;
+		margin-left:30px;
+		
+		text-align:center;
+
+		border:3px solid #F60;
+
+	}
+	
+	#logoBar #search .imgSearch {
+		float:left;
+		
+		width:16px;
+		height:16px;
+		margin-left:2px;
+		margin-top:7px;
+		
+		background:transparent url(../img/list/menu.png) no-repeat -67px -18px;
+		text-decoration:none;
+	}
+	
+	#logoBar #search .textSeatch {
+		float:left;
+		
+		width:192px;
+		*width:180px;
+		height:30px;
+		*height:26px;
+		margin-left:2px;
+		
+		line-height:28px;/*IE支持的文本框垂直居中*/
+		
+		border:none;
+		background:transparent;/*IE6 下部显示边框的方法*/
+
+		font-size:16px;
+
+	}
+	#logoBar #search .btnSearch {
+		float:left;
+		
+		width:100px;
+		height:30px;		
+		margin-left:2px;
+		
+		background:transparent url(../img/list/search.gif) no-repeat top;
+		display:inline;
+		cursor:pointer;
+
+	}
+	
+	#logoBar #search .bookSearch {
+		float:left;
+		width:300px;
+		height:25px;
+		
+	}
+	
+	#logoBar #circularMenu #circularMenuTop {
+		float:left;
+		clear:both;
+		
+		height:26px;
+
+
+		color:#F60;
+		margin-top:20px;
+	}
+	
+	#logoBar #circularMenu #circularMenuTitle {
+		float:left;
+		clear:both;
+		
+		height:24px;
+	}
+	
+	#logoBar #circularMenu #circularMenuTitle ul{
+		float:left;
+		
+		margin:0px;
+		padding:0px;
+		
+		list-style:none;
+			
+		text-align:center;
+		color:#FFF;
+		font-weight:bold;
+		
+
+	}
+	
+	#logoBar #circularMenu #circularMenuTitle ul li {
+		width:100px;
+		display:inline;
+		
+		background:transparent url(../img/list/tab-right.gif) no-repeat top right;
+		float:left;
+	}
+	
+	#logoBar #circularMenuTitle ul li a:link,#circularMenuTitle ul li a:visited {
+		
+		
+		padding-left:2em;
+		padding-right:2em;
+		padding-top:4px;
+		
+		font-size:14px;
+		display:block;
+		line-height:20px;
+		
+		color:#FFF;
+		text-decoration:none;
+
+		background:transparent url(../img/list/tab-left.gif) no-repeat top left;
+		
+	}
+	
+	#logoBar #circularMenuTitle ul li a:active,#circularMenuTitle ul li a:hover {
+		float:left;
+		
+		padding-left:2em;
+		padding-top:4px;
+		
+		font-size:14px;
+		display:block;
+		
+		color:#333;
+		text-decoration:none;
+
+		background:transparent url(../img/list/tab-left.gif) no-repeat top left;
+		
+	}
+	
+	#menu {
+		position:relative;
+		
+		width:auto;
+		min-width:1050px;/*该数值保证菜单栏不管窗体如何变化，都不得小于该数值的长度*/
+		height:30px;
+		top:0px;
+		left:0px;
+		
+		text-align:center;
+		margin:auto;
+	
+		background:transparent url(../img/list/lines.gif) repeat-x 0px -60px;
+
+	}
+	
+	#menu #rang {
+		position:relative;
+		
+		width:1050px;
+		height:30px;
+
+		text-align:center;
+		margin:auto;
+
+		color:#FFF;
+	}
+	
+	#menu #rang .items {
+		float:left;
+		
+		padding:0px;
+		margin:0px;
+	
+		list-style:none;
+
+	}
+	
+	#menu #rang .items li{
+		float:left;
+		
+		padding-top:8px;
+		padding-left:5px;
+		padding-right:5px;
+		margin-right:5px;
+
+		text-align:center;
+		display:inline;		
+	}
+	
+	#menu #rang .items .img{
+		float:left;
+		
+		padding-top:8px;
+		
+		text-align:right;
+		width:70px;
+
+		text-align:right;
+		*text-align:left;
+		display:inline;
+	}
+	
+	#menu #rang .items .img s{
+		float:right;
+		*position:absolute;
+
+		width:25px;
+		height:10px;
+		
+		display:inline-block;
+		*display:inline;
+		background:transparent url(../img/list/new.gif) no-repeat top right;
+	}
+	
+	#leftMenu {
+		float:left;
+		
+		height:auto;
+		width:148px;
+		
+		margin:0px 20px 0px 0px;
+		border:1px solid #A4D7CA;
+		background-color: #F0FDF1;
+	}
+	
+	#leftMenu .root{
+		float:left;
+		
+		width:148px;
+		height:auto;
+		
+		list-style:none;
+	}
+	
+	#leftMenu .root_top{
+		border-top:1px solid #A4D7CA;
+	}
+	
+	#leftMenu .root li {
+		float:left;
+		
+		width:148px;
+		height:30px;
+		line-height:30px;
+		text-align:left;
+		
+		display:inline;
+	}
+	
+	#leftMenu .root li h3{
+		float:left;
+		
+		width:138px;
+		height:30px;
+		line-height:30px;
+	
+		padding:0px 0px 0px 10px;
+		
+		display:inline;
+		
+		border-bottom:1px solid #A4D7CA;
+		background-color:#ECFCED;
+		background:url(../img/list/bg_change.gif) repeat-x left top;
+	}
+	
+	#leftMenu .root li a:link,
+	#leftMenu .root li a:active,
+	#leftMenu .root li a:visited{
+		
+		float:left;
+		
+		width:128px;
+		height:30px;
+		line-height:30px;
+	
+		margin:0px 0px 0px 10px;
+		padding:0px 0px 0px 10px;
+		
+		color:#333;
+	}
+	
+	#leftMenu .root li a:hover
+	{
+		color:#009C74;
+		text-decoration:underline;
+		background:url(../img/list/bg_icon.gif) no-repeat 0px -20px;
+	}
+	
+	#leftMenu .root li .selected,
+	#leftMenu .root li .selected:link,
+	#leftMenu .root li .selected:active,
+	#leftMenu .root li .selected:visited{
+	
+		color:#009C74;
+		text-decoration:none;
+		font-weight:bold;
+		background:url(../img/list/bg_icon.gif) no-repeat 0px 10px;
+	}
+	
+	#leftMenu .root li .selected:hover
+	{
+		color:#009C74;
+		text-decoration:underline;
+		background:url(../img/list/bg_icon.gif) no-repeat 0px 10px;
+	}
+	
+	#contextMenu {
+		float:left;
+		
+		height:30px;
+		line-height:30px;
+		width:950px;
+		text-align:left;
+		margin:0px 0px 20px 0px;
+	}

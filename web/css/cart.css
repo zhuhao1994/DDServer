@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* CSS Document */
+#cartPane {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+	
+	text-align:center;
+		
+	width:1050px;
+	height:auto;
+}
+
+#cartPane .hr {
+	float:left;
+	
+	width:1050px;
+	height:2px;
+	
+	margin-top:5px;
+	
+	background-color:#F07700;
+	
+}
+
+#cartPane #status {
+	float:left;
+	
+	width:1050px;
+	height:35px;
+		
+	margin-top:10px;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px 0px;
+	
+}
+
+#cartPane #onsale {
+	float:left;
+	
+	width:1050px;
+	height:20px;
+		
+	margin-top:10px;
+}
+
+#cartPane #onsale i{
+	float:left;
+	
+	width:20px;
+	height:20px;
+	
+	margin:2px;
+	
+	background:url(../img/cart/icon_cart.gif) no-repeat 0px 0px;
+}
+
+#cartPane #onsale .detail {
+	float:left;
+	width:1026px;
+	
+	height:20px;
+	line-height:20px;
+	
+	text-align:left;
+	font-weight:normal;
+	
+	font-size:12px;
+}
+
+#cartPane #cart {
+	float:left;
+	
+	width:1050px;
+	height:auto;
+	
+	margin-top:20px;
+}
+
+#cartPane #cart #nodata{
+	float:left;
+	
+	width:650px;
+	height:140px;
+	
+	padding-top:60px;
+	padding-left:400px;
+	
+  	margin-top:5px;
+}
+
+#cartPane #cart #nodata s{
+	float:left;
+	
+	width:63px;
+	height:71px;
+	
+	text-decoration:none;
+	
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -820px;
+}
+
+#cartPane #cart #nodata h3{
+	float:left;
+	
+	width:150px;
+	height:71px;
+	
+	line-height:71px;
+	text-align:left;
+	font-size:16px;
+
+	color:#666;
+	
+	margin-left:30px;
+}
+
+#cartPane #cart #nodata span{
+	float:left;
+	
+	width:110px;
+	height:71px;
+	
+	line-height:71px;
+	text-align:left;
+	font-size:14px;
+}
+
+#cartPane #cart .th {
+	float:left;
+	
+	width:1050px;
+	height:25px;
+	
+	line-height:25px;
+	text-align:center;
+	font-size:14px;
+	
+	list-style:none;
+	display:block;
+	
+	background-color:#F7F4EB;
+	border-top:2px solid #FBD6B0;
+	border-bottom:1px solid #FBD6B0;
+}
+
+#cartPane #cart .th li {
+	float:left;
+	
+	width:110px;
+	height:25px;
+	
+	display:inline;
+}
+
+#cartPane #cart .th .bookname{
+	width:500px;
+}
+
+#cartPane #cart .tr {
+	float:left;
+	
+	width:1050px;
+	height:100px;
+	
+	font-size:12px;
+	
+	list-style:none;
+}
+
+#cartPane #cart .tr li {
+	position:relative;
+	*float:left;
+	
+	display:table-cell;
+	*display:inline;
+    vertical-align:middle;
+    overflow:hidden;
+	
+	width:99px;
+	height:99px;
+
+	padding-left:5px;
+	padding-right:5px;
+	
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+}
+
+#cartPane #cart .tr .bookname{
+	position:relative;
+	
+	
+	width:489px;
+	*width:488px;
+	height:99px;
+	
+	padding-left:5px;
+	padding-right:5px;
+	
+	border-left:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+}
+
+#cartPane #cart .tr .bookname .content {
+	position:relative;
+	*float:left;
+	
+	display:table-cell;
+	
+    vertical-align:middle;
+    overflow:hidden;
+	
+	width:411px;
+	height:90px;
+
+}
+
+#cartPane #cart .tr .bookname img {
+	float:left;
+	
+	
+	margin-right:5px;
+	
+	width:70px;
+	height:90px;
+	
+	clear:both;
+	
+	border:1px solid #CCC;
+}
+
+#cartPane #totalprice {
+	float:left;
+	
+	width:1040px;
+	height:20px;
+	
+	padding-right:10px;
+	
+	text-align:right;
+		
+	margin-top:10px;
+}
+
+#cartPane #totalprice b {
+	font-weight:bold;
+	font-size:16px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#cartPane #totalprice span {
+	font-weight:bold;
+	font-size:16px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#F30;
+}
+
+#cartPane #btn {
+	float:left;
+	
+	width:1040px;
+	height:20px;
+	
+	padding-right:10px;
+	
+	text-align:right;
+		
+	margin-top:10px;
+}
+
+#cartPane #btn .goon {
+	float:right;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -120px;
+	width:90px;
+	height:26px;
+	line-height:22px;
+	font-size:14px;
+	text-align:center;
+	padding-left:10px;
+	
+	cursor:pointer;
+}
+
+#cartPane #btn .confirm {
+	float:right;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -80px;
+	width:150px;
+	height:32px;
+	
+	margin-left:50px;
+	
+	cursor:pointer;
+}
+
+#cartPane #summary {
+	
+	float:left;
+	
+	width:1040px;
+	height:30px;
+	line-height:30px;
+	
+	padding-left:10px;
+	
+	text-align:left;
+	
+	font-size:14px;
+	
+	margin-top:20px;
+	margin-bottom:10px;
+	
+	background-color:#F7F4EB;
+
+	border:1px solid #FBD6B0;
+
+}
+
+.txt {
+	height:20px;
+	width:50px;
+	
+	text-align:right;
+	
+	border:1px solid #F07700;
+}
+

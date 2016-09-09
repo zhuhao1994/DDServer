@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+#reg {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+	
+	text-align:center;
+		
+	width:745px;
+	height:500px;
+	
+	border:1px groove #999;
+}
+
+#reg .title{
+	float:left;
+		
+	width:675px;
+	height:39px;
+	margin:5px;
+	
+	text-align:left;
+	font-size:18px;
+	
+	padding:15px 0px 0px 60px;
+	
+	background:url(../img/list/bg_login_t.gif) no-repeat left top;
+}
+
+#reg .caption{
+	float:left;
+
+	margin:0px 5px 0px 5px;
+		
+	width:735px;
+	height:25px;
+	
+	
+	background:url(../img/list/email_reg_titlebar.gif) no-repeat left top;
+}
+
+#reg .caption i{
+	float:left;
+	
+	width:367px;
+	height:25px;
+	line-height:25px;
+	
+	text-align:center;
+	
+	color:#F30;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+
+	
+	margin:0px 1px 0px 0px;
+}
+
+#reg .caption s{
+	float:left;
+	
+	width:367px;
+	height:25px;
+	line-height:25px;
+	
+	text-align:center;
+	
+	color:#666;
+	font-weight:normal;
+	text-decoration:none;
+	
+	margin:0px 0px 0px 0px;
+}
+
+#reg .frame{
+	float:left;
+	
+	width:735px;
+	height:401px;
+	margin:5px;
+	
+	list-style:none;
+}
+
+#reg .frame .tr{
+	
+	width:735px;
+	height:40px;
+	
+	margin:10px 0px 10px 0px;
+}
+
+#reg .frame .tr .btn_reg{
+	float:left;
+	
+	width:154px;
+	height:39px;
+	
+	background:url(../img/list/btn_login_refer1.gif) no-repeat left top;
+	
+	margin:5px 0px 0px 145px;
+	
+	cursor:pointer;
+}
+
+#reg .frame .tr .agree{
+	float:left;
+	width:330px;
+	*width:340px;
+	height:40px;
+	
+	margin:5px 0px 0px 145px;
+}
+
+
+.tr_selected {
+	background-color:#DCFDC6;
+}
+
+#reg .frame .tr .content {
+	
+	width:735px;
+	height:40px;
+	line-height:40px;
+	
+	font-size:14px;
+	
+	list-style:none;
+}
+
+#reg .frame .tr .content .td{
+	float:left;
+	
+	width:245px;
+	height:40px;
+	line-height:40px;
+	
+	display:inline;
+}
+
+#reg .frame .tr .content .label {
+	float:left;
+	
+	width:145px;
+	height:40px;
+	line-height:40px;
+	
+	display:inline;
+}
+
+#reg .frame .tr .content .msg {
+	position:absolute;
+	
+	width:345px;
+	height:40px;
+	line-height:40px;
+	
+	left:395px;
+	*left:400px;
+	margin-left:3px;
+
+	display:inline;
+	visibility:hidden;
+	
+	
+}
+
+.err_msg {
+	color:red;
+	background:url(../img/list/bg_login_wrong.gif) no-repeat left top;
+	padding:1px 0px 0px 10px;
+	width:365px;
+	height:40px;
+	line-height:40px;
+}
+
+.info_msg {
+	color:#093;
+}
+
+.reg_txt {
+	width:240px;
+	height:30px;
+	line-height:30px;
+	padding:2px;
+	border:1px solid #F30;
+}
+

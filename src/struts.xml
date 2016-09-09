@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="dangdang" extends="struts-default" namespace="/">
+		<!--<action name="editpwd" class="com.globalite.dangdang.struts2.action.EditPasswordAction">
+			<result name="err" type="dispatcher">/WEB-INF/jsp/manager/editpwd.jsp</result>
+			<result name="ok" type="dispatcher">/MainLogonServlet</result>
+		</action>
+		<action name="load_editmail" class="com.globalite.dangdang.struts2.action.EditMailAction" method="load">
+			<result name="default" type="dispatcher">/WEB-INF/jsp/manager/editmail.jsp</result>
+		</action>
+		<action name="save_editmail" class="com.globalite.dangdang.struts2.action.EditMailAction" method="save">
+			<result name="default" type="dispatcher">/WEB-INF/jsp/manager/editmail.jsp</result>
+			<result name="ok" type="dispatcher">/myself.do?op=load</result>
+		</action>-->
+		<action name="load_editmail" class="editMailAcion" method="load">
+			<result name="default" type="dispatcher">/WEB-INF/jsp/manager/editmail.jsp</result>
+		</action>
+		<action name="save_editmail" class="editMailAcion" method="save">
+			<result name="default" type="dispatcher">/WEB-INF/jsp/manager/editmail.jsp</result>
+			<result name="ok" type="dispatcher">/myself.do?op=load</result>
+		</action>
+		<action name="editpwd" class="editPasswordAction">
+			<result name="err" type="dispatcher">/WEB-INF/jsp/manager/editpwd.jsp</result>
+			<result name="ok" type="dispatcher">/MainLogonServlet</result>
+		</action>
+	</package>
+</struts>

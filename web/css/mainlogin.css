@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+	#loginBar {
+		position:relative;
+		
+		width:1280px;
+		height:583px;
+		margin:auto;
+		margin-top:20px;
+		
+		text-align:center;
+		
+		background:transparent url(../img/login/login_bg1.jpg) no-repeat top left;
+	}
+	
+	#loginBar #login {
+		position:absolute;
+		left:850px;
+		top:0px;
+		width:306px;
+		height:306px;
+	}
+	
+	#loginBar #login .top{
+		position:relative;
+		
+		background:url(../img/login/login.gif) no-repeat 0px -10px;
+		
+		height:5px;
+		width:306px;
+	}
+	#loginBar #login .bottom{
+		position:relative;
+		
+		background:url(../img/login/login.gif) no-repeat 0px 0px;
+		
+		height:5px;
+		width:306px;
+	}
+	
+	#loginBar #login ul{
+		position:relative;
+		
+		background:transparent url(../img/login/login_bg_frame.gif) repeat-y top left;
+		
+		color:#666;
+		
+		height:300px;
+		width:306px;
+		
+		list-style:none;
+	}
+	
+	#loginBar #login ul li{
+		float:left;
+		
+		margin-top:15px;
+		
+		height:20px;
+		width:306px;
+	}
+	
+	#loginBar #login ul li .txt{
+
+		background: #FFFFFF;
+		border: 1px solid #999;
+		color: #000000;
+	}
+	
+	#loginBar #login ul .btn{
+		float:left;
+		
+		margin-top:15px;
+		
+		text-align:center;
+		line-height:40px;
+		
+		height:25px;
+		width:306px;
+	}
+	
+	#loginBar #login ul .summary{
+		float:left;
+		text-align:left;
+		
+		line-height:20px;
+		
+		padding-left:30px;
+		padding-right:30px;
+		
+		margin-top:25px;
+		
+		height:30px;
+		width:246px;
+	}
+	
+	#loginBar #login ul .btn .button{
+		float:left;
+		height:28px;
+		width:95px;
+		
+		margin-top:10px;
+		margin-left:40px;
+		background:url(../img/login/login.gif) no-repeat 0px -169px;
+		
+		cursor:pointer;
+	}
+	
+	#loginBar #login ul .btn .button_over{
+		float:left;
+		height:28px;
+		width:95px;
+		
+		margin-top:10px;
+		margin-left:40px;
+		background:url(../img/login/login.gif) no-repeat 0px -199px;
+		
+		cursor:pointer;
+	}
+	
+	#loginBar #login ul .btn .regbutton{
+		float:left;
+		height:28px;
+		width:95px;
+		
+		margin-top:10px;
+		margin-left:40px;
+		background:url(../img/login/login.gif) no-repeat -155px -169px;
+		
+		cursor:pointer;
+	}
+	#loginBar #login ul .btn .regbutton_over{
+		float:left;
+		height:28px;
+		width:95px;
+		
+		margin-top:10px;
+		margin-left:40px;
+		background:url(../img/login/login.gif) no-repeat -155px -199px;
+		
+		cursor:pointer;
+	}
+	
+	#loginBar #login ul .btn .link{
+		float:left;
+		height:20px;
+		width:70px;
+		
+		margin-top:10px;
+		margin-left:10px;
+	}
+	
+	#loginBar #login ul li h2{
+		float:left;
+			
+		height:20px;
+		width:126px;
+		padding-left:20px;
+		color:black;
+	}
+	
+	#loginBar #login ul li .errorinfo {
+		float:left;
+		
+		height:20px;
+		width:160px;
+		font-weight:bold;
+
+		color:red;
+	}
+	
+	#loginBar #login ul li label{
+		float:left;
+			
+		height:20px;
+		width:100px;
+	}
+	
+	#loginBar #login ul li span{
+		float:left;
+			
+		height:20px;
+		width:auto;
+	}

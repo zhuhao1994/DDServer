@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+	/************************Lightbox层*****************************/
+	#mainPane {
+	/*alpha说明　　
+	Opacity:		起始值，取值为0～100, 0为透明，100为原图。
+	FinishOpacity:	可选,结束值，取值为0～100, 0为透明，100为原图。
+	style:			可选,参数指定了透明区域的形状特征。
+					0代表统一形状、1代表线形、2代表放射状、3代表长方形。
+	StartX:			可选,代表渐变透明效果开始X坐标。
+	StartY:			可选,代表渐变透明效果开始Y坐标。
+	FINISHX:		可选,代表渐变透明效果结束X坐标。
+	FINISHY:		可选,代表渐变透明效果结束Y坐标。
+	*/
+		filter:Alpha(Opacity=60);
+		-moz-opacity:0.6;/*火狐不支持Alpha，该属性适用于低版本的火狐浏览器*/
+		opacity:.60; /*火狐不支持Alpha，该属性适用于高版本的火狐浏览器*/
+		background-color:#666;
+		width:100%;
+		height:100%;
+		position:fixed;
+		left:0px;
+		top:0px;
+		visibility:hidden;
+	}
+	
+	/************************菜单***********************************/
+	/*
+		IE8,FF不支持css expression，由于太过消耗资源，所以不支持
+	*/
+	#msg {
+		position:absolute;
+		width:300px;
+		height:300px;
+		*height:330px;
+		top:50%;
+		left:50%;
+		margin-left:-150px;
+		margin-top:-110px;
+		/*left: expression((document.body.offsetWidth/2) - 150 + "px");
+		top: expression((document.body.offsetHeight/2) - 110 + "px");*/
+		z-index:2000;
+		background-color:#FFF;
+		visibility:hidden;
+	}
+	
+	#msg .title {
+		position:relative;
+		height:20px;
+		background-color:#CCC;
+		font-size:12px;
+		font-weight:bold;
+		padding-top:2px;
+		padding-left:5px;
+	}
+	
+	#msg .title .close {
+		float:right;
+		width:50px;
+		height:15px;
+		margin-top:2px;
+		background:transparent url(../img/login/close.gif) no-repeat;
+		cursor:pointer;
+	}
+	#msg .info {
+		position:relative;
+		height:20px;
+		background:transparent url(../img/login/standard_msg_ok.gif) no-repeat 5px top;
+		font-size:12px;
+		font-weight:bold;
+		margin-top:5px;
+		padding-top:2px;
+		padding-left:25px;
+	}
+	
+	
+	#msg .errorinfo {
+		position:relative;
+		height:20px;
+		background:transparent url(../img/login/standard_msg_error.gif) no-repeat 5px top;
+		font-size:12px;
+		font-weight:bold;
+		margin-top:5px;
+		padding-top:2px;
+		padding-left:25px;
+		color:red;
+	}
+	
+	#msg .text {
+		position:relative;
+		height:20px;
+		padding-top:2px;
+		padding-left:25px;
+		margin-top:25px;
+	}
+	#msg .btn {
+		position:relative;
+		text-align:right;
+		height:20px;
+		padding-right:25px;
+		margin-top:50px;
+		cursor:pointer;
+	}
+	
+	#msg .text label{
+		display:block;
+		font-weight:bold;
+	}
+	
+	textarea, input, select{
+		background: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		color: #000000;
+	}
+	
+	.loginTxt {
+		background-position: 1px 1px;
+		background-repeat:no-repeat;
+		padding-left:20px;
+		height:20px;
+	}
+	
+	.username{
+		background-image:url(../img/login/username.gif);
+	}
+	.password{
+		background-image:url(../img/login/password.gif);
+	}
+	.code{
+		background-image:url(../img/login/code.png);
+	}

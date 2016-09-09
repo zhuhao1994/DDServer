@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+	<!ELEMENT menu (root*, mapping*)>
+	<!ELEMENT root (item*)>
+	<!ATTLIST root id ID #REQUIRED>
+	<!ATTLIST root name CDATA #REQUIRED>
+	<!ELEMENT mapping (page,selected,clazz)>
+	<!ELEMENT page (#PCDATA)>
+	<!ELEMENT selected (#PCDATA)>
+	<!ELEMENT clazz (#PCDATA)>
+	<!ELEMENT item (#PCDATA)>
+	<!ATTLIST item id ID #REQUIRED>
+	<!ATTLIST item url CDATA #REQUIRED>

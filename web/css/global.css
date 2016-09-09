@@ -1,0 +1,101 @@
+	@charset "utf-8";
+	*{
+		margin:0;
+		padding:0;
+	}
+	/*global css*/
+	body,h1,h2,h3,h4,h5,h6,hr,
+	p,blockquote,dl,dt,dd,ul,ol,li,pre,form,
+	fieldset,legend,button,input,textarea,th,td {
+		margin:0;padding:0;
+	}
+	
+	body,button,input,select,textarea {
+		font:12px/1.5 tahoma,arial,\5b8b\4f53;
+		line-height:15px;
+	}
+	
+	h1,h2,h3,h4,h5,h6{
+		font-size:100%;
+	}
+	address,cite,dfn,em,var{
+		font-style:normal;
+	}
+	code,kbd,pre,samp{
+		font-family:courier new,courier,monospace;
+	}
+	small{
+		font-size:12px;
+	}
+	ul,ol{
+		list-style:none;
+	}
+	a{
+		color:blue;
+		text-decoration:none;
+	}
+	a:hover{
+		color:blue;
+		text-decoration:underline;
+	}
+	a:active{
+		color:blue;
+		text-decoration:underline;
+	}
+	a:visited{
+		color:blue;
+		text-decoration:none;
+	}
+	a:link{
+		color:blue;
+		text-decoration:none;
+	}
+	sup{
+		vertical-align:text-top;
+	}
+	sub{
+		vertical-align:text-bottom;
+	}
+	legend{
+		color:#000;
+	}
+	fieldset,img{
+		border:0;
+	}
+	button,input,select,textarea{
+		font-size:100%;
+	}
+	table{
+		border-collapse:collapse;border-spacing:0;
+	}
+	
+	.data_date {
+		text-align:center;
+	}
+	
+	.data_char {
+		text-align:left;
+	}
+	
+	.data_number {
+		text-align:right;
+	}
+	
+	
+	.middle {
+		*position:absolute;
+		*top:50%;
+	}
+	.inner {
+		*position:relative;
+		*top:-50%;
+		*left:-50%;
+	}
+	.none_border {
+		border:none;
+	}
+	
+	.red_star {
+		color:red;
+		text-decoration:none;
+	}

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎登陆-当当网</title>
+
+<script type="text/javascript" src="js/common.js"  charset="gbk"></script>
+
+<style type="text/css" media="screen">
+	@import url("css/global.css");
+	@import url("css/menu.css");
+	@import url("css/mainlogin.css");
+</style>
+
+</head>
+
+<body>
+    
+    <div id="logoBar">
+    	<div id="logo"></div>
+    </div>
+    
+    <div id="loginBar">
+    	<div id="login">
+        	<div class="top"></div>
+            <ul>
+            	<li>
+                	<h2>Email地址或昵称登录</h2>
+                    <p class="errorinfo">
+						显示错误消息
+					</p>
+                </li>
+                <li>
+                	<label>登录账户:</label>
+                    <span><input type="text" name="uid" class="txt" /></span>
+                </li>
+                <li>
+                	<label>账户密码:</label>
+                	<span><input type="password" name="pwd" class="txt" /></span>
+                </li>
+                <li>
+                	<label><img onclick="refreshCode();" id="imgCode" 
+                    title="看不清楚?点我换一张" src="/ImageServlet" 
+                    width="80px" height="20px" /></label>
+                    <span><input type="text" name="code" class="txt" /></span>
+                </li>
+                <li class="btn">
+                	<span class="button" 
+                    	onclick="javascript:window.location.href='books.html';"></span>
+                    <span class="link"><a href="#">忘记密码？</a></span>
+                </li>
+                <li class="summary">
+                	还不是当当网用户？快捷方便的免费注册，让你立刻尽享当当网提供的各项优惠及服务... 
+                </li>
+                <li class="btn">
+                	<span class="regbutton" 
+                   onclick="javascript:window.location.href='register.html';"></span>
+                </li>
+            </ul>
+            <div class="bottom">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

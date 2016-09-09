@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>当当网订单确认页面</title>
+
+<script type="text/javascript" src="js/common.js" charset="gbk"></script>
+<script type="text/javascript" src="js/confirm.js" charset="gbk"></script>
+
+<style type="text/css" media="screen">
+	@import url("css/global.css");
+	@import url("css/menu.css");
+	@import url("css/confirm.css");
+</style>
+
+</head>
+
+<body>
+    <div id="navigate">
+    	<div id="rang">
+        	<ul class="login">
+                <li>您好,&nbsp;
+                <a href="login.html">登录当当</a>&nbsp;&nbsp;
+                <a href="login.html">退出</a>
+                <a href="#">站内信</a>
+                </li>
+            </ul>
+            <ul class="content">
+            	<li><a href="#">联系我们</a></li>
+                <li><s class="search">&nbsp;</s><a href="#">搜索</a></li>
+                <li><a href="myself.html">我的当当</a></li>
+                <li><a href="orders.html">我的订单</a></li>
+                <li class="sc">
+                    <s class="shoppingCart">&nbsp;</s>
+                    <a href="cart.html">
+                    购物车&nbsp;<span id="mailNumber">(0)</span>
+                    </a>
+                </li>
+                <li>欢迎光临</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="logoBar">
+   	  <div id="logo"></div>
+    </div>
+    
+    <div id="confirm">
+    	<div class="hr"></div>
+		<div id="status"><a href="cart.html">我的购物车</a></div>
+        <p id="caption">请确认以下信息，然后提交订单</p>
+        <div id="orderPane">
+       	  	<div class="pane">
+            	<p>收货人信息 &nbsp;&nbsp;&nbsp; <a href="#">[关闭]</a></p>
+                <ul class="content">
+                	<li>
+                    	<input type="radio" name="address" value="0" checked="checked"/>
+                        Frank，中国 上海 上海市 长宁区长宁路550弄9号102 200335 12345678 12345678901
+                    </li>
+                    <li><input type="radio" name="address" value="1" />
+                        Frank，中国 上海 上海市 长宁区古北路55弄19号402 200335 12345678 12345678901
+                    </li>
+                    <li><input type="radio" name="address" value="2" />
+                        Rose，中国 上海 上海市 黄浦区作兴路(近长汇路)泰源大厦1219号1902室 200335 12345678 12345678901
+                    </li>
+                    <li><input type="radio" name="address" value="3" />
+                        Annie，中国 北京 北京市 朝阳区五菱路长搓街西里胡同22号 200115 87654321 09876543211
+                    </li>
+                    <li><input type="radio" name="address" value="4" />
+                        创建新地址
+                    </li>
+                </ul>
+                <div class="confBtn">
+                	<span class="btn_confirm">确认收货地址</span>
+                </div>
+            </div>
+
+            <div class="pane">
+            	<p>支付方式&nbsp;&nbsp;&nbsp;<a href="#">[关闭]</a></p>
+                <ul class="content">
+                	<li>
+                    	<input type="radio" name="payType" value="0" checked="checked"/>
+                        货到付款<s>您需要在收货时用现金向送货员支付订单款项。</s>
+                    </li>
+                   	<li>
+                    	<input type="radio" name="payType" value="1" />
+                        网上支付<s>您需要先拥有一张已开通网上支付功能的银行卡。</s>
+                    </li>
+                    <li>
+                    	<input type="radio" name="payType" value="2" />
+                        银行汇款<s>您需要先去银行转帐，所购商品将在款项到达当当网帐户后发出，到款时间一般为1-5个工作日。</s>
+                    </li>
+                </ul>
+                <div class="confBtn">
+                	<span class="btn_confirm">确认支付方式</span>
+                </div>
+            </div>
+            
+            <div class="pane">
+            	<p>送货方式&nbsp;&nbsp;&nbsp;<a href="#">[关闭]</a></p>
+                <ul class="content">
+                	<li>
+                    	<input type="radio" name="deliverPrice" value="5.00" checked="checked"
+                        onclick="cal(this);" />
+                        运费：05.00元<s>普通运送方式 全天运送。</s>
+                    </li>
+                    <li>
+                    	<input type="radio" name="deliverPrice" value="12.00" 
+                    	onclick="cal(this);" />
+                        运费：12.00元<s>EMS全国运送统一价格。</s>
+                    </li>
+                    <li>
+                    	<input type="radio" name="deliverPrice" value="22.00" 
+                    	onclick="cal(this);" />
+                        运费：22.00元<s>加急，当天送达(只限江浙沪地区用户)</s>
+                    </li>
+                    <li>
+                    	<input type="radio" name="deliverPrice" value="0.00" 
+                        onclick="cal(this);"/>
+                        运费：免费<s>自提，当当目前全国拥有1997个自提点</s>
+                    </li>
+                </ul>
+                <div class="confBtn">
+                	<span class="btn_confirm">确认送货方式</span>
+                </div>
+            </div>
+            
+			<div class="pane">
+            	<p>开具发票&nbsp;&nbsp;&nbsp;<a href="#">[关闭]</a></p>
+                <ul class="content">
+                	<li>
+                        <b>发票类型:</b>
+       					
+                        <input id="rdonone" class="invoiceRdo"
+                        type="radio" name="invoiceType" value="0" checked="checked" />								
+                        <label for="rdonone">无需发票</label>
+                        
+                        <input id="rdoPerson" class="invoiceRdo"
+                        type="radio" name="invoiceType" value="1" />
+                        <label for="rdoPerson">个人发票</label>
+
+                        <input id="rdoCompany" class="invoiceRdo" 
+                        type="radio" name="invoiceType" value="2" />
+                        <label for="rdoCompany">公司发票</label>
+                    </li>
+                    <li>
+                    	<b>发票类型:</b>
+                        <select name="invoiceContent">
+                        	<option value="0">图书</option>
+                            <option value="1">影像制品</option>
+                            <option value="2">办公用品</option>
+                            <option value="3">日用品</option>
+                            <option value="4">其他</option>
+                        </select>
+                    </li>
+                   
+                </ul>
+                <div class="confBtn">
+                	<span class="btn_confirm">确认发票信息</span>
+                </div>
+            </div>
+            
+            <div class="pane" style="border:none;">
+            	<p>您的商品信息&nbsp;&nbsp;&nbsp;<a href="#">[关闭]</a></p>
+                <ul class="content">
+                	<li>
+                    	商家：当当网  预计3-5天送达
+                    </li>
+                </ul>
+                <div id="shopping">
+                    <ul class="th">
+                        <li class="bookname">商品名</li>
+                        <li class="td">数量</li>
+                        <li class="td">价格</li>
+                        <li class="td">折扣</li>
+                        <li class="td">小计</li>
+                    </ul>
+                    <ul class="tr">
+                        <li class="data_char bookname">
+                            FBI心理分析术：我在FBI的20年（FBI心理分析创始人20年手记）(当当网全国独家经销）
+                        </li>
+                        <li class="data_date">5</li>
+                        <li class="data_date">￥89.00</li>
+                        <li class="data_date">6.5折</li>
+                        <li class="data_date">￥445.00</li>
+                    </ul>
+                    <div class="price">商品金额总计：￥<span id="sPrice">445.60</span></div>
+                    <div class="price">商品运费：<s>￥</s><s id="dPrice">5.00</s></div>
+                    <div class="price"><b>您需支付(含运费)：</b><s>￥</s><s id="tPrice">450.60</s>
+                    </div>
+                    <div class="shopping_btn">
+                    	<span class="btn_submit" 
+                        onclick="javascript:window.location.href='over.html'"></span>
+                    </div>
+            	</div>                    
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#confirm {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+		
+	width:1050px;
+	height:auto;
+	
+	text-align:center;
+}
+
+#confirm .hr {
+	position:relative;
+	
+	width:1050px;
+	height:2px;
+	
+	margin-top:5px;
+	
+	background-color:#F07700;
+	
+}
+
+#confirm #status {
+	position:relative;
+	
+	width:1050px;
+	height:35px;
+		
+	margin-top:10px;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -248px;
+}
+
+#confirm #status a{
+	position:absolute;
+	left:30px;
+	top:8px;
+	color:#666;
+}
+
+#confirm #caption {
+	float:left;
+	
+	height:25px;
+	line-height:25px;
+	
+	text-align:left;
+	
+	margin-top:5px;
+}
+
+#confirm #orderPane {
+	float:left;
+	
+	width:1050px;
+	height:auto;
+	
+	margin:0px 0px 20px 0px;
+
+	border:2px solid #FBD6B0;
+	background-color:#F7F4EB;
+}
+
+#confirm #orderPane .pane{
+	float:left;
+
+	width:1000px;
+	height:auto;
+	
+	margin:5px 25px 5px 25px;
+	padding-bottom:10px;
+	
+	border-bottom:1px solid #FBD6B0;
+}
+
+#confirm #orderPane .pane P{
+	float:left;
+	
+	width:1000px;
+	height:20px;
+	line-height:20px;
+	
+	font-size:14px;
+	font-weight:bold;
+	
+	text-align:left;
+
+}
+#confirm #orderPane .pane .content{
+	float:left;
+	
+	height:auto;
+	width:1000px;
+	
+	overflow:hidden;
+	list-style:none;
+
+}
+
+#confirm #orderPane .pane .confBtn{
+	float:left;
+	
+	width:1000px;
+	height:25px;
+
+}
+
+#confirm #orderPane .pane .content li{
+	float:left;
+	
+	width:1000px;
+	height:20px;
+	line-height:20px;
+	
+	margin:10px 0px 10px 0px;
+	
+	overflow:hidden;
+	
+	text-align:left;
+	text-indent:2em;
+	
+}
+
+#confirm #orderPane .pane .content li input{
+	margin:0px 5px 0px 5px;
+}
+
+#confirm #orderPane .pane .content li s{
+	margin:0px 0px 0px 10px;
+	text-decoration:none;
+	color:#666;
+}
+
+#confirm #orderPane .pane .content li label{
+	color:#666;
+	cursor:pointer;
+}
+
+#confirm #orderPane .pane #confEntry {
+	float:left;
+	
+	width:1000px;
+	height:0px;
+	visibility:hidden;
+	
+	margin:0px 0px 0px 10px;
+}
+#confirm #orderPane .pane #confEntry #errMessage {
+	float:left;
+	height:0px;
+	line-height:20px;
+	width:auto;
+	
+	visibility:hidden;
+	
+	font-weight:bold;
+	text-decoration:none;
+	
+	border:1px solid red;
+	color:red;
+	background:#FFDFDF url(../img/login/standard_msg_error.gif) no-repeat 5px 5px;
+	padding:5px 10px 5px 25px;
+	margin:0px 0px 0px 20px;
+}
+
+#confirm #orderPane .pane #confEntry .confAddress {
+	float:left;
+	
+	width:1000px;
+	height:20px;
+	line-height:20px;
+	
+	overflow:hidden;
+	list-style:none;
+	margin:10px 0px 10px 0px;
+}
+
+#confirm #orderPane .pane #confEntry .confAddress .addressLabel{
+	float:left;
+	
+	width:60px;
+	height:20px;
+	line-height:20px;
+	
+	text-align:right;
+	
+	overflow:hidden;
+	margin:0px 10px 0px 0px;
+}
+
+#confirm #orderPane .pane #confEntry .confAddress .addressContenxt{
+	float:left;
+	
+	width:200px;
+	height:20px;
+	line-height:20px;
+	
+	text-align:left;
+	overflow:hidden;
+}
+
+#confirm #orderPane .pane #confEntry .confAddress .addressOptions{
+	float:left;
+	
+	width:800px;
+	height:20px;
+	line-height:20px;
+	
+	text-align:left;
+	overflow:hidden;
+}
+
+#confirm #orderPane .pane #confEntry .confAddress .addressDetail{
+	float:left;
+	
+	width:800px;
+	height:20px;
+	line-height:20px;
+	
+	text-align:left;
+	overflow:hidden;
+}
+
+#confirm #orderPane .pane .invoiceRdo{
+
+	margin:0px 0px 0px 5px;
+
+}
+
+#confirm #orderPane .pane .confBtn .btn_confirm {
+	float:left;
+	
+	width:115px;
+	height:26px;
+	line-height:26px;
+	
+	text-align:center;
+	font-weight:bold;
+	color:#FFF;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -360px;
+	cursor:pointer;
+	
+}
+
+
+
+ #shopping {
+	float:left;
+	
+	width:980px;
+	height:auto;
+	
+}
+
+ #shopping .th {
+	position:relative;
+	
+	width:980px;
+	height:25px;
+	
+	text-align:center;
+	font-size:12px;
+
+	list-style:none;
+	background-color:#F07700;
+	color:#FFF;
+	
+	border-top:1px solid #FBD6B0;
+	border-bottom:1px solid #FBD6B0;
+}
+#shopping .th .td {
+	float:left;
+	
+	width:100px;
+	height:25px;
+	line-height:25px;
+	display:inline;
+}
+
+#shopping .th .bookname{
+	float:left;
+	width:580px;
+	height:25px;
+	line-height:25px;
+	display:inline;
+}
+
+#shopping .tr {
+	position:relative;
+	
+	width:980px;
+	height:25px;
+	
+	font-size:12px;
+	
+	list-style:none;
+	background-color:#FFF;
+	
+	border-bottom:1px solid #FBD6B0;
+}
+
+#shopping .tr li {
+	float:left;
+	display:inline;
+
+    overflow:hidden;
+	
+	width:90px;
+	height:25px;
+	line-height:25px;
+
+	padding-left:5px;
+	padding-right:5px;
+}
+
+#shopping .tr .bookname{
+	float:left;
+	
+	display:inline;
+
+    overflow:hidden;
+	
+	width:570px;
+	height:25px;
+	line-height:25px;
+
+	padding-left:5px;
+	padding-right:5px;
+	
+}
+
+#shopping .price {
+	width:980px;
+	height:25px;
+	line-height:25px;
+	text-align:right;
+	margin:5px 0px 0px 0px;
+}
+
+#shopping .price s{
+	text-decoration:none;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#F30;
+}
+
+#shopping .shopping_btn {
+	width:980px;
+	height:45px;
+	
+	margin:5px 0px 0px 0px;
+}
+
+#shopping .shopping_btn .btn_submit {
+	float:right;
+	
+	width:142px;
+	height:35px;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -320px;
+	cursor:pointer;
+}
+.txt {
+	border:1px solid #F30;
+}

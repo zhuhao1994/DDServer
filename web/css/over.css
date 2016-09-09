@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#over {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+	
+	text-align:center;
+		
+	width:1050px;
+	height:auto;
+}
+
+#over .hr {
+	position:relative;
+	
+	width:1050px;
+	height:2px;
+	
+	margin-top:5px;
+	
+	background-color:#F07700;
+	
+}
+
+#over #status {
+	position:relative;
+	
+	width:1050px;
+	height:35px;
+		
+	margin-top:10px;
+	
+	background:url(../img/cart/bg_cart_pic.gif) no-repeat 0px -708px;
+}
+
+#over #content {
+	position:relative;
+	
+	width:1050px;
+	height:250px;
+	
+	border:2px solid #FBD6B0;
+	
+	margin:15px 0px 0px 0px;
+}
+
+#over #content .info{
+	position:relative;
+	
+	width:1000px;
+	height:180px;
+	line-height:150px;
+	
+	margin:0px 25px 0px 25px;
+	
+	background:url(../img/list/bg_success.gif) no-repeat 200px 25px;
+	
+	border-bottom:1px solid #FBD6B0;
+
+}
+
+#over #content .summary{
+	position:relative;
+	
+	width:1000px;
+	height:70px;
+	line-height:70px;
+	
+	margin:0px 25px 0px 25px;
+	
+	text-align:center;
+	color:#666;
+}
+
+#over #content .info .price{
+	float:left;
+	
+	width:600px;
+	height:25px;
+	line-height:25px;
+	
+	font-size:16px;
+	font-weight:bold;
+
+	text-align:left;
+	
+	margin:32px 0px 0px 290px;
+	
+}
+
+#over #content .info .price a{
+	font-size:12px;
+	font-weight:normal;
+}
+
+#over #content .info .confirm{
+	float:left;
+	
+	width:600px;
+	height:25px;
+	line-height:25px;
+	
+	font-size:14px;
+	
+	text-align:center;
+	margin:32px 0px 0px 290px;
+	text-align:left;
+
+}
+
+#over #content .info .confirm s{
+	text-decoration:none;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#F30;
+}
+
+#over #content .summary s{
+	text-decoration:none;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	color:red;
+}

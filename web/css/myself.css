@@ -1,0 +1,159 @@
+@charset "utf-8";
+#myself {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+		
+	width:950px;
+	height:300px;
+	
+	text-align:center;
+}
+
+#myself #pane {
+	float:left;
+	
+	height:300px;
+	width:780px;
+	background-color:#F0FDF1;
+	
+
+}
+#myself #pane #leftPane{
+	float:left;
+	
+	width:100px;/*FF:100+20+30 = 150px)*/
+	margin:20px 20px 0px 30px;
+	height:380px;
+	clear:both;
+}
+
+#myself #pane #rightPane{
+	float:left;
+	width:580px;/*FF:150px + 580 + 50px = 780px*/
+	margin:20px 50px 0px 0px;
+	*width:600px;
+	*margin:20px 0px 0px 0px;
+
+	height:280px;
+
+}
+
+#myself #pane #rightPane h2 {
+	float:left;
+	
+	display:inline;
+	text-align:left;
+	width:200px;
+	height:20px;
+	line-height:20px;
+	
+	font-size:16px;
+}
+#myself #pane #rightPane .cus_edit {
+	float:left;
+	
+	display:inline;
+	text-align:left;
+	width:380px;
+	height:20px;
+	line-height:20px;
+}
+
+#myself #pane #rightPane .cus_info{
+	float:left;
+	
+	list-style:none;
+	width:580px;
+	height:80px;
+}
+#myself #pane #rightPane .cus_info li{
+	float:left;
+	
+	display:inline;
+	width:580px;
+	height:20px;
+}
+#myself #pane #rightPane .cus_info li label{
+	float:left;
+	
+	display:inline;
+	width:70px;
+	height:20px;
+	line-height:20px;
+	text-align:right;
+}
+#myself #pane #rightPane .cus_info li .cus_content {
+	float:left;
+	
+	display:inline;
+	width:500px;
+	height:20px;
+	line-height:20px;
+	margin:0px 0px 0px 10px;
+	text-align:left;
+}
+
+#myself #pane #rightPane .cus_info li .cus_member {
+	width:55px;
+}
+#myself #pane #rightPane .cus_info li .cus_member_img {
+	float:left;
+	
+	width:445px;
+	height:20px;
+	line-height:20px;
+	text-align:left;
+}
+
+#myself #pane #rightPane .order_info {
+	float:left;
+	
+	list-style:none;
+	width:568px;
+	height:78px;
+	
+	padding:0px 5px 0px 5px;
+	background-color:#FFF;
+	border:1px solid #CCC;
+}
+
+#myself #pane #rightPane .order_info .ord_status{
+	float:left;
+	
+	display:inline;
+	width:568px;
+	height:39px;
+	line-height:39px;
+	
+	border-bottom:1px dashed #999;
+}
+#myself #pane #rightPane .order_info h3 {
+	float:left;
+		
+	width:80px;
+	height:39px;
+	line-height:39px;
+			
+	display:inline;
+}
+
+#myself #pane #rightPane .order_info .ord_status .ord_content {
+	float:left;
+		
+	width:100px;
+	height:39px;
+	line-height:39px;
+			
+	display:inline;
+}
+
+#head_img {
+	float:left;
+
+	background:url(../img/cus/face.png);
+	
+	width:96px;
+	height:96px;
+}

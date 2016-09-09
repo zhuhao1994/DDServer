@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "dwr30.dtd">
+
+<dwr>
+	<allow>
+
+		<create creator="spring" javascript="cityDao">
+			<param name="location" value="classpath:spring.xml"></param>
+			<param name="beanName" value="cityDao"></param>
+		</create>
+		<create creator="spring" javascript="addressDao">
+			<param name="location" value="classpath:spring.xml"></param>
+			<param name="beanName" value="addressDao"></param>
+		</create>
+		
+		<convert match="com.globalite.dangdang.entity.Consignmentaddress" converter="bean">
+		</convert>
+		<convert match="com.globalite.dangdang.entity.City" converter="bean"></convert>
+		<convert match="com.globalite.dangdang.entity.Customer" converter="bean">
+			<param name="include" value="id,regname,name,mobile,email,password,birthday,sex,age,identity,head,deleteflag,version,operator" />
+		</convert>
+	</allow>
+</dwr>
+			

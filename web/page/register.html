@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>当当网新用户注册页面</title>
+<script type="text/javascript" src="js/common.js" charset="gbk"></script>
+<script type="text/javascript" src="js/msg.js" charset="gbk"></script>
+<script type="text/javascript" src="js/validator.js" charset="gbk"></script>
+<script type="text/javascript" src="js/reg.js" charset="gbk"></script>
+<style type="text/css" media="screen">
+	@import url("css/global.css");
+	@import url("css/menu.css");
+	@import url("css/reg.css");
+</style>
+</head>
+
+<body>
+
+	<!-- 公共菜单部分 -->
+    <div id="navigate">
+    	<div id="rang">
+        	<ul class="login">
+                <li>您好,&nbsp;
+                <a href="login.html">登录当当</a>&nbsp;&nbsp;
+                <a href="login.html">退出</a>
+                <a href="#">站内信</a>
+                </li>
+            </ul>
+            <ul class="content">
+            	<li><a href="#">联系我们</a></li>
+                <li><s class="search">&nbsp;</s><a href="#">搜索</a></li>
+                <li><a href="myself.html">我的当当</a></li>
+                <li><a href="orders.html">我的订单</a></li>
+                <li class="sc">
+                    <s class="shoppingCart">&nbsp;</s>
+                    <a href="cart.html">
+                    购物车&nbsp;<span id="mailNumber">(0)</span>
+                    </a>
+                </li>
+                <li>欢迎光临</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="logoBar">
+    	<div id="logo"></div>
+        <div id="circularMenu">
+            <div id="circularMenuTop">网上购物享当当</div>
+            <div id="circularMenuTitle">
+                <ul>
+                    <li><a href="books.html">首页</a></li>
+                    <li><a href="books.html">图书</a></li>
+                    <li><a href="#">百货</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a href="#">促销</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="search">
+            <s class="imgSearch">&nbsp;</s>
+            <input type="text" class="textSeatch" name="search"/>
+            <p class="btnSearch"></p>
+        </div>
+	</div>
+    
+    <div id="menu">
+   	  <div id="rang">
+        	<ul class="items">
+            	<li>小说</li>
+                <li>青春</li>
+                <li>历史</li>
+                <li>心理学</li>
+                <li>保健</li>
+                <li>少儿</li>
+                <li>外语</li>
+                <li class="img">考试<s></s></li>
+                <li>中小学教辅</li>
+                <li>图书畅销榜</li>
+                <li>新书热卖榜</li>
+                <li class="img">特价书<s></s></li>
+                <li>图书畅销</li>
+                <li>所有图书分类</li>
+                <li>精品套装图书</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 公共菜单部分 -->
+    
+    <div id="reg">
+    	<p class="title">欢迎注册当当网！</p>
+        <span class="caption">
+        	<i>1、填写注册信息</i><s>2、注册成功</s>
+        </span>
+		<ul id="frame" class="frame">
+        	<li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">Email地址：</li>
+                    <li class="td data_char">
+                    	<input type="text" id="txtMail" name="email" class="reg_txt" 
+                        onfocus="selectTr(0,INFO_MSG_EMAIL);" 
+						onblur="validateMail(0);"/>
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">登录密码：</li>
+                    <li class="td data_char">
+                    	<input type="password" id="txtPassword"
+                        	name="password" class="reg_txt" 
+                        	onfocus="selectTr(5,INFO_MSG_PWD);" 
+                            onblur="validatePassword(5)"/>
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">确认密码：</li>
+                    <li class="td data_char">
+                    	<input type="password" id="txtRePassword"
+                        	name="repassword" class="reg_txt" 
+                        	onfocus="selectTr(10,INFO_MSG_REPWD);" 
+                            onblur="validateRePassword(10)"/>
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">登陆名(昵称)：</li>
+                    <li class="td data_char">
+                    	<input type="text" name="name" class="reg_txt" id="txtRegName"
+                        	onfocus="selectTr(15,INFO_MSG_REGNAME);"
+                            onblur="validateRegName(15);"/>
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">真实姓名：</li>
+                    <li class="td data_char">
+                    	<input type="text" name="name" class="reg_txt" id="txtName"
+                        	onfocus="selectTr(20,INFO_MSG_NAME);"
+                            onblur="validateName(20);"/>
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">手机号码：</li>
+                    <li class="td data_char">
+                    	<input type="text" name="mobile" class="reg_txt" 
+                        	id="txtMobile"
+                        	onfocus="selectTr(25,INFO_MSG_MOBILE);"
+                            onblur="validateMobile(25);"/>
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<ul class="content">
+                	<li class="label data_number">验证码：</li>
+                    <li class="td data_char">
+                    	<input type="text" name="code" class="reg_txt" id="txtCode"
+                        style="width:150px;" onfocus="selectTr(30,INFO_MSG_CODE);"
+                        onblur="validateCode(30);"/>
+                        <img onclick="refreshCode();" id="imgCode" 
+                    	title="看不清楚?点我换一张" src="/ImageServlet" 
+                   		width="80px" height="20px" />
+                    </li>
+                    <li class="msg data_char info_msg"></li>
+                    <li class="msg data_char err_msg"></li>
+                </ul>
+            </li>
+            <li class="tr">
+            	<span class="btn_reg" onclick="validateAll();doHref('books.html');">
+                </span>
+            </li>
+            <li class="tr">
+				<span class="agree">
+                <input id="agree" type="checkbox" checked="checked" name="agree"/>
+                <label for="agree">我已阅读并同意《当当网交易条款》和《当当网社区条款》</label>
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

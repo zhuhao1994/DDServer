@@ -1,0 +1,158 @@
+@charset "utf-8";
+#editmail {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+		
+	width:950px;
+	height:auto;
+	
+	text-align:center;
+}
+
+#editmail #pane {
+	float:left;
+	
+	height:auto;
+	width:780px;
+}
+
+#editmail #pane h3{
+	float:left;
+	
+	height:20px;
+	line-height:20px;
+	width:770px;
+	
+	text-align:left;
+	
+	margin:0px 0px 5px 0px;
+	padding:0px 0px 0px 10px;
+	
+	border-bottom:2px solid #CCC;
+}
+
+#editmail #pane #content{
+	float:left;
+	
+	height:350px;
+	width:770px;
+	
+	text-align:left;
+	
+	padding:0px 0px 0px 10px;
+	
+	background-color: #F0FDF1;
+	
+}
+
+#editmail #pane #content #mail_info {
+	float:left;
+	
+	height:250px;
+	width:770px;
+	padding:50px 0px 0px 0px;
+	
+	list-style:none;
+}
+
+
+#editmail #pane #content #mail_info li {
+	float:left;
+	
+	width:770px;
+	height:40px;/* 3*40(height) = 120 + 3*20(margin) = 180*/
+	
+	margin:20px 0px 0px 0px;
+}
+
+#editmail #pane #mail_info li .cmp_title {
+	float:left;
+	
+	width:250px;
+	height:30px;
+	line-height:20px;
+	
+	text-align:right;
+	
+	margin:0px 5px 0px 0px;
+}
+#editmail #pane #mail_info li .cmp_mail {
+	float:left;
+	
+	width:250px;
+	height:30px;
+	line-height:20px;
+	font-size:14px;
+	font-weight:bold;
+	
+	text-align:left;
+	
+	margin:0px 5px 0px 0px;
+}
+#editmail #pane #mail_info li .cmp_content {
+	float:left;
+	
+	width:515px;
+	height:30px;
+	line-height:30px;
+	
+	text-align:left;
+}
+
+#editmail #pane #mail_info .btn {
+	float:left;
+	
+	width:770px;
+	height:50px;
+	
+	text-align:center;
+	
+	margin:20px 0px 0px 0px;
+}
+
+.info_panel {
+	height:20px;
+	line-height:20px;
+	width:auto;
+	
+	font-weight:bold;
+	text-decoration:none;
+	
+	color:#999;
+}
+
+.err_panel {
+
+	height:20px;
+	line-height:20px;
+	width:auto;
+	
+	font-weight:bold;
+	text-decoration:none;
+	visibility:hidden;
+	
+	border:1px solid red;
+	color:red;
+	background:#FFDFDF url(../img/login/standard_msg_error.gif) no-repeat 5px 5px;
+	padding:5px 10px 5px 25px;
+	
+}
+
+.mail_txt {
+	
+	border:1px solid #A4D7CA;
+	height:20px;
+	line-height:20px;
+}
+
+.edit_btn {
+	border:1px solid #009C74;
+	height:30px;
+	line-height:30px;
+	width:150px;
+	background:#A4D7CA;
+	
+	cursor:pointer;
+}

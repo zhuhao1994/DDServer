@@ -1,0 +1,164 @@
+@charset "utf-8";
+#editOwn {
+	position:relative;
+	
+	margin:auto;
+	margin-top:20px;
+		
+	width:950px;
+	height:auto;
+	
+	text-align:center;
+}
+
+#editOwn #pane {
+	float:left;
+	
+	height:auto;
+	width:780px;
+}
+#editOwn #pane h3{
+	float:left;
+	
+	height:20px;
+	line-height:20px;
+	width:770px;
+	
+	text-align:left;
+	
+	margin:0px 0px 5px 0px;
+	padding:0px 0px 0px 10px;
+	
+	border-bottom:2px solid #CCC;
+}
+
+#editOwn #pane #own_info {
+	float:left;
+	
+	height:auto;
+	width:780px;
+	
+	list-style:none;
+}
+
+#editOwn #pane #own_info li{
+	float:left;
+	
+	width:780px;
+	height:40px;
+
+}
+
+#editOwn #pane #own_info .big_head{
+	float:left;
+	
+	width:776px;
+	height:120px;
+	
+	border:2px solid #A4D7CA;
+}
+
+#editOwn #pane #own_info .big_head .img_big_head {
+	float:left;
+	
+	width:100px;
+	height:100px;
+	
+	margin:10px 10px 10px 70px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);
+
+}
+
+#editOwn #pane #own_info .big_head b {
+	float:left;
+	
+	width:596px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	font-weight:normal;
+	text-align:left;
+		
+	margin:35px 0px 0px 0px;
+}
+#editOwn #pane #own_info .big_head .upload {
+	float:left;
+	
+	width:596px;
+	height:30px;
+	text-align:left;
+	margin:0px 0px 45px 0px;
+}
+
+#editOwn #pane #own_info .component {
+	float:left;
+	
+	width:780px;
+	height:30px;
+	
+	margin:20px 0px 0px 0px;
+}
+
+#editOwn #pane #own_info .component .cmp_title {
+	float:left;
+	
+	width:100px;
+	height:30px;
+	line-height:20px;
+	
+	text-align:right;
+	
+	margin:0px 5px 0px 0px;
+}
+#editOwn #pane #own_info .component .cmp_content {
+	float:left;
+	
+	width:675px;
+	height:30px;
+	line-height:30px;
+	
+	text-align:left;
+}
+
+#editOwn #pane #own_info .btn {
+	float:left;
+	
+	width:780px;
+	height:30px;
+	
+	margin:20px 0px 0px 0px;
+}
+
+.err_panel {
+
+	height:20px;
+	line-height:20px;
+	width:auto;
+	
+	font-weight:bold;
+	text-decoration:none;
+	visibility:hidden;
+	
+	border:1px solid red;
+	color:red;
+	background:#FFDFDF url(../img/login/standard_msg_error.gif) no-repeat 5px 5px;
+	padding:5px 10px 5px 25px;
+	
+}
+
+.edti_txt {
+	
+	border:1px solid #A4D7CA;
+	height:20px;
+	line-height:20px;
+}
+
+.edit_btn {
+	border:1px solid #009C74;
+	height:30px;
+	line-height:30px;
+	width:150px;
+	background:#A4D7CA;
+	
+	cursor:pointer;
+}

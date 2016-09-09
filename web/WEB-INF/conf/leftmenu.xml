@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="gbk" ?>
+<!DOCTYPE menu SYSTEM "leftmenu.dtd">
+<menu>
+	<root id="om" name="订单管理">
+		<item id="om-1" url="/orders.do?op=load">我的订单</item>
+		<item id="om-2" url="#">订单支付历史</item>
+	</root>
+	<root id="ms" name="我的商品">
+		<item id="ms-1" url="#">已购商品</item>
+		<item id="ms-2" url="#">我的收藏</item>
+	</root>
+	<root id="am" name="账户管理">
+		<item id="am-1" url="#">礼券/礼品卡</item>
+		<item id="am-2" url="#">我的积分</item>
+		<item id="am-3" url="#">收货地址簿</item>
+		<item id="am-4" url="#">账户余额</item>
+		<item id="am-5" url="/editown.do?op=load">编辑个人档案</item>
+		<item id="am-6" url="/load_editmail.action">修改E-Mail地址</item>
+		<item id="am-7" url="/editpwd.action?op=load">修改密码</item>
+		<item id="am-8" url="#">手机绑定</item>
+		<item id="am-9" url="#">站内信息</item>
+		<item id="am-10" url="#">我的问答</item>
+	</root>
+    <root id="mb" name="我的社区">
+		<item id="mb-01" url="#">我的评论/评价</item>
+		<item id="mb-02" url="#">我的书架</item>
+        <item id="mb-03" url="#">我的关注</item>
+        <item id="mb-04" url="#">我的留言板</item>
+        <item id="mb-05" url="#">我的书签</item>
+    </root>
+	<root id="sm" name="二手书交易管理">
+	</root>
+	<mapping>
+		<page>orders.jsp</page>
+		<selected>om-1</selected>
+		<clazz>selected</clazz>
+	</mapping>
+	<mapping>
+		<page>myself.jsp</page>
+		<selected>none</selected>
+		<clazz>selected</clazz>
+	</mapping>
+	<mapping>
+		<page>editown.jsp</page>
+		<selected>am-5</selected>
+		<clazz>selected</clazz>
+	</mapping>
+	<mapping>
+		<page>editpwd.jsp</page>
+		<selected>am-7</selected>
+		<clazz>selected</clazz>
+	</mapping>
+	<mapping>
+		<page>editmail.jsp</page>
+		<selected>am-6</selected>
+		<clazz>selected</clazz>
+	</mapping>
+</menu>

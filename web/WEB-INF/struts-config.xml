@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="cartConfirmForm"
+			type="com.globalite.dangdang.struts.web.form.CartConfirmForm" />
+		<form-bean name="orderOverForm"
+			type="com.globalite.dangdang.struts.web.form.OrderOverForm" />
+		<form-bean name="regForm"
+			type="com.globalite.dangdang.struts.web.form.RegForm" />
+		<form-bean name="ordersForm"
+			type="com.globalite.dangdang.struts.web.form.OrdersForm" />
+		<form-bean name="myselfForm"
+			type="com.globalite.dangdang.struts.web.form.MyselfForm" />
+		<form-bean name="editownForm"
+			type="com.globalite.dangdang.struts.web.form.EditownForm" />
+
+	</form-beans>
+	<global-exceptions />
+	<global-forwards>
+		<forward name="login" path="/IndexServlet" />
+	</global-forwards>
+	<action-mappings>
+		<action attribute="cartConfirmForm" name="cartConfirmForm"
+			path="/cartConfirm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false" parameter="op">
+			<forward name="default" path="/WEB-INF/jsp/cart/confirm.jsp" />
+			<forward name="ok" path="/orderOver.do" />
+			<forward name="error" path="/index.jhtml" redirect="true" />
+		</action>
+		<action attribute="orderOverForm" name="orderOverForm" path="/orderOver"
+			scope="request" type="com.globalite.dangdang.struts.web.action.OrderOverAction"
+			validate="false">
+			<set-property property="cancellable" value="true" />
+			<forward name="default" path="/WEB-INF/jsp/cart/over.jsp" />
+		</action>
+		<action attribute="regForm" name="regForm" path="/reg" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<set-property property="cancellable" value="true" />
+			<forward name="default" path="/WEB-INF/jsp/register.jsp" />
+			<forward name="ok" redirect="true" path="/index.jhtml" />
+		</action>
+		<action attribute="ordersForm" name="ordersForm" parameter="op"
+			path="/orders" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<set-property property="cancellable" value="true" />
+			<forward name="default" path="/WEB-INF/jsp/manager/orders.jsp" />
+		</action>
+		<action attribute="myselfForm" name="myselfForm" path="/myself"
+			parameter="op" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<set-property property="cancellable" value="true" />
+			<forward name="default" path="/WEB-INF/jsp/manager/myself.jsp" />
+		</action>
+		<action attribute="editownForm" name="editownForm" parameter="op"
+			path="/editown" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<set-property property="cancellable" value="true" />
+			<forward name="default" path="/WEB-INF/jsp/manager/editown.jsp" />
+			<forward name="myself" path="/myself.do?op=load" />
+		</action>
+
+	</action-mappings>
+	<controller processorClass="com.globalite.dangdang.framework.MyProcessor" ></controller>
+	<message-resources parameter="ApplicationResources" />
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property value="classpath:spring.xml" property="contextConfigLocation"/>
+	</plug-in>
+</struts-config>
+

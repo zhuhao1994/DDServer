@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true"
+	name="cacheManager">
+	
+	<diskStore path="oracle.dd.io.store" />
+	
+	 <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+     />
+     
+     <!-- 
+		name:设置缓存的名称，用于标志缓存,唯一 
+        maxElementsInMemory:在内存中最大的对象数量 
+        maxElementsOnDisk：在DiskStore中的最大对象数量，如为0，则没有限制 
+        eternal：设置元素是否永久的，如果为永久，则timeout忽略 
+        overflowToDisk：是否当memory中的数量达到限制后，保存到Disk 
+        timeToIdleSeconds：设置元素过期前的空闲时间 
+        timeToLiveSeconds：设置元素过期前的活动时间 
+        diskPersistent：是否disk store在虚拟机启动时持久化。默认为false 
+        diskExpiryThreadIntervalSeconds:运行disk终结线程的时间，默认为120秒 
+        memoryStoreEvictionPolicy：策略关于Eviction 
+	 -->
+	<cache name="cart"
+		eternal="false"
+		maxElementsInMemory="10000"
+		maxElementsOnDisk="0"
+		timeToIdleSeconds="604800"
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LFU">
+		<cacheEventListenerFactory class="com.oracle.dd.cache.monitor.CommonCacheEventListenerFactory"  />
+		
+	</cache>
+	            
+    <cache name="org.hibernate.cache.StandardQueryCache"
+            maxElementsInMemory="10000" 
+            eternal="false" 
+            timeToIdleSeconds="1800" 
+            timeToLiveSeconds="0" 
+            overflowToDisk="true"/>
+       
+   	<cache name="com.globalite.dangdang.entity.Book"
+            maxElementsInMemory="10000" 
+            eternal="false" 
+            timeToIdleSeconds="1800" 
+            timeToLiveSeconds="0" 
+            overflowToDisk="true"/>
+
+</ehcache>

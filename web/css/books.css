@@ -1,0 +1,95 @@
+	@charset "utf-8";
+	#dataBar {
+		margin:auto;
+		width:900px;
+		height:300px;
+		margin-top:20px;
+	}
+	
+	#dataBar .tr{
+		margin:auto;
+		width:900px;
+		height:200px;
+		margin-top:20px;
+		
+	}
+	
+	#dataBar .tr .imgTd{
+		float:left;
+		width:200px;
+		height:200px;
+		
+	}
+	
+	#dataBar .tr ul{
+		float:left;
+		width:700px;
+		height:200px;
+		list-style:none;
+		
+	}
+	
+	#dataBar .tr ul li{
+		width:700px;
+		height:20px;
+		list-style:none;
+		text-align:left;
+		margin-top:10px;
+		
+	}
+	
+	#dataBar .tr ul .content{
+		text-indent:2em;
+		width:700px;
+		height:40px;
+		margin-top:10px;
+	}
+	
+	#dataBar .tr ul .title{
+		width:700px;
+		border-bottom:1px dashed #33C;
+		height:40px;
+		margin-top:10px;
+	}
+	#dataBar .tr ul .btn{
+		width:700px;
+		height:60px;
+		margin-top:10px;
+	}
+	
+	#dataBar .tr ul .btn .cell{
+		width:700px;
+		height:60px;
+		list-style:none;
+
+	}
+	
+	#dataBar .tr ul .btn .cell li{
+		float:right;
+		width:90px;
+		display:inline;
+	}
+	
+	#dataBar .tr ul .btn .cell .price{
+		float:right;
+		width:70px;
+		display:inline;
+		color:red;
+		
+	}
+	
+	#dataBar .tr ul .btn .cell .oldprice{
+		float:right;
+		width:90px;
+		display:inline;
+		color:#999;
+		text-decoration:line-through;
+	}
+	
+	#dataBar .tr ul .btn .cell .discount{
+		float:right;
+		width:90px;
+		color:#639;
+		display:inline;
+	}
+	

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>当当网购物车页面</title>
+<script type="text/javascript" src="js/common.js" charset="gbk"></script>
+<style type="text/css" media="screen">
+	@import url("css/global.css");
+	@import url("css/menu.css");
+	@import url("css/login.css");
+	@import url("css/cart.css");
+</style>
+<!-- IE7以及IE7以下版本可识别,css hack -->
+<!--[if lt IE 7]>  
+    <style type="text/css" media="screen">
+	html{overflow:hidden;}/*定义html为一屏大小，超出则hidden*/   
+	/*body必须定义overflow:auto;否则不出现滚动条   
+   	如果不定义高度，浮层的高度也无从定义   
+   	另外，body还要去除margin，否则滚动条不在最右边，一般在定义css初就应设置这个属性*/   
+	body{overflow:auto;height:100%;}   
+	/*对IE 6要设置成绝对定位，如果设置right的话，注意右边界是包括滚动条的，试一下right:0;就看出来了*/   
+	#mainPane{position:absolute;}
+    </style>
+<![endif]-->  
+</head>
+
+<body>
+
+    <div id="navigate">
+    	<div id="rang">
+        	<ul class="login">
+                <li>您好,&nbsp;
+                <a href="login.html">登录当当</a>&nbsp;&nbsp;
+                <a href="login.html">退出</a>
+                <a href="#">站内信</a>
+                </li>
+            </ul>
+            <ul class="content">
+            	<li><a href="#">联系我们</a></li>
+                <li><s class="search">&nbsp;</s><a href="#">搜索</a></li>
+                <li><a href="myself.html">我的当当</a></li>
+                <li><a href="orders.html">我的订单</a></li>
+                <li class="sc">
+                    <s class="shoppingCart">&nbsp;</s>
+                    <a href="cart.html">
+                    购物车&nbsp;<span id="mailNumber">(0)</span>
+                    </a>
+                </li>
+                <li>欢迎光临</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="logoBar">
+   	  <div id="logo"></div>
+    </div>
+    
+    <div id="cartPane">
+    	<div class="hr"></div>
+        <div id="status"></div>
+        <div id="onsale">
+        	<i></i>
+            <span class="detail">
+            当当网&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;购物满29元免运费 
+            </span>
+        </div>
+        
+        <div id="cart">
+        	<ul class="th">
+            	<li class="bookname">商品名</li>
+                <li>数量</li>
+                <li>价格</li>
+                <li>折扣</li>
+                <li>小计</li>
+                <li>操作</li>
+            </ul>
+            
+            <!-- 没有数据时候需要显示的层
+            <div id="nodata">
+            	<s></s><h3>您还没有挑选商品,</h3>
+                <span><a href="books.html">去促销看看&gt;&gt;</a></span>
+            </div>
+            -->
+            
+           	<ul class="tr">
+                <li class="bookname">
+                	<img src="img/books/20227505-1_b.jpg" />
+                    
+               	  <div class="content">
+                        <div class="middle">
+                            <div class="inner data_char">
+                                <a href="detail.html">
+                                FBI心理分析术：我在FBI的20年（FBI心理分析创始人20年手记）(当当网全国独家经销）
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="data_date">
+                	<div class="middle">
+                        <div class="inner">
+                            <input type="text" class="txt" value="5" 
+                                   maxlength="5" size="5" />
+                        	<a href="#">修改</a>
+                      </div>
+                	</div>
+                </li>
+                <li class="data_date">
+	                <div class="middle">
+                        <div class="inner">
+                            ￥89.00
+                        </div>
+                	</div>
+                </li>
+              	<li class="data_date">
+                	<div class="middle">
+                        <div class="inner">
+                            6.5折
+                        </div>
+                	</div>
+                </li>
+              	<li class="data_date">
+                	<div class="middle">
+                        <div class="inner">
+                            ￥445.00
+                        </div>
+                	</div>
+                </li>
+                <li class="data_date">
+                    <div class="middle">
+                        <div class="inner">
+                            <a href="#">删除</a>
+                        </div>
+                	</div>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="totalprice">
+        	<b>商品金额总计：</b> <span>￥445.00</span>
+        </div>
+        
+        <div id="btn">
+            <span class="confirm" 
+            	onclick="javascript:location.href='confirm.html'"></span>
+            <span class="goon" 
+            	onclick="javascript:location.href='books.html'">继续购物</span>
+        </div>
+        
+        <div id="summary">下单购买商品 -请<a href="javascript:show('visible');">登录</a>后再确认</div>
+    </div>
+    
+    <!--页面平铺遮挡层-->
+	<div id="mainPane"></div>
+    <!--登录层-->
+    <div id="msg">
+    	<p class="title">+ LOGIN WINDOW<span class="close" onclick="show('hidden');"></span></p>
+        <p class="info">请输入登陆的用户和密码</p>
+        <p class="text">
+        	<label for="user">Username:</label>
+          <input type="text" name="username" class="loginTxt username" id="user" />
+        </p>
+        <p class="text">
+        	<label for="pwd">Password:</label>
+          <input type="password" name="password" class="loginTxt password" id="pwd" />
+        </p>
+        <p class="text">
+        	<label for="code">Code:
+            <img onclick="refreshCode();" id="imgCode" title="看不清楚?点我换一张" src="ImageServlet" width="80px" height="20px" />
+            </label>
+          <input type="text" name="password" class="loginTxt code" id="code" />
+        </p>
+        <p class="btn">
+        	<img src="img/login/loginin.gif" width="70PX" height="21PX" 
+            onclick="show('hidden');" />
+        </p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- ================用户非法访问过滤器================== -->
+	<filter>
+		<filter-name>userFilter</filter-name>
+		<filter-class>com.globalite.dangdang.filter.UserFilter</filter-class>
+		<init-param>
+			<param-name>wrongUrl</param-name>
+			<param-value>/index.jhtml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>userConstants</param-name>
+			<param-value>com.globalite.dangdang.constants.customername</param-value>
+		</init-param>
+		<init-param>
+			<param-name>isRun</param-name>
+			<param-value>Y</param-value>
+		</init-param>
+		<init-param>
+			<param-name>permits</param-name>
+			<param-value>/;/index.html;/books.jsp;/login.html;/login.jhtml;/logon.jhtml;/index.jhtml;/code.jhtml;.*.json;.*.jpg;.*.css;.*.png;.*.gif;.*.js</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>userFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++++++++++++++++++业务控制器配置信息+++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- 索引页控制器配置 -->
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.IndexAction</servlet-class>
+		<init-param>
+			<param-name>spring_config</param-name>
+			<param-value>spring.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 验证码控制器配置 -->
+	<servlet>
+		<servlet-name>code</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.CodeAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>code</servlet-name>
+		<url-pattern>/code.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 登录控制器配置 -->
+	<servlet>
+		<servlet-name>loginAction</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.LoginAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginAction</servlet-name>
+		<url-pattern>/login.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 退出系统控制器配置 -->
+	<servlet>
+		<servlet-name>logonAction</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.LogonAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logonAction</servlet-name>
+		<url-pattern>/logon.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 书籍检索系统控制器配置 -->
+	<servlet>
+		<servlet-name>booksAction</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.BooksAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>booksAction</servlet-name>
+		<url-pattern>/books.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 书籍详细页面控制器配置 -->
+	<servlet>
+		<servlet-name>detailAction</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.BookDetailAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>detailAction</servlet-name>
+		<url-pattern>/detail.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 回话购物车控制器配置【基于Session购物车】 -->
+	<servlet>
+		<servlet-name>scAction</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.ShoppingCartAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>scAction</servlet-name>
+		<url-pattern>/cart.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- 订单确认控制器配置 -->
+	<servlet>
+		<servlet-name>ocAction</servlet-name>
+		<servlet-class>com.globalite.dangdang.mvc.action.OrderConfirmAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ocAction</servlet-name>
+		<url-pattern>/orderconfirm.jhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++++++++++++++++++系统框架控制器配置信息++++++++++++++++++++++++++++++++++ -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	<!-- ================DWR Framework请求处理器================== -->
+	<servlet>
+		<servlet-name>dwr</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Struts1 Framework控制器配置 -->
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- Struts2 Framework控制器配置 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+
+	<!-- ================加载Spring WebContext================== -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- JSON请求自定义处理框架控制器 -->
+	<servlet>
+		<servlet-name>JSONServlet</servlet-name>
+		<servlet-class>com.globalite.dangdang.framework.JSONServlet</servlet-class>
+		<init-param>
+			<param-name>jsonActionPackege</param-name>
+			<param-value>com.globalite.dangdang.json.action</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>JSONServlet</servlet-name>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet> <servlet-name>DelegationServletProxy</servlet-name> <servlet-class>com.globalite.dangdang.mvc.action.DelegationServletProxy</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>DelegationServletProxy</servlet-name> 
+		<url-pattern>/proxy/serlvet</url-pattern> </servlet-mapping> -->
+
+</web-app>

@@ -1,0 +1,338 @@
+	@charset "utf-8";
+	
+	.divLine {
+		border-bottom:1px dotted #666;
+	}
+	
+	/*databar*/
+	.dataBar {
+		position:relative;
+		margin:auto;
+		margin-top:20px;
+		
+		width:750px;
+		height:420px;
+	}
+	/*dataBar - title*/
+	.dataBar .title {
+		position:relative;
+		
+		width:740px;
+		*width:750px;
+		height:30px;
+		/*top right bottom left */
+		padding:0px 0px 0px 10px;
+		
+		line-height:30px;
+		font-weight:bold;
+		font-size:18px;
+	}
+	/*dataBar - content*/
+	.dataBar .content {
+		position:relative;
+		height:370px;
+		margin:20px 0px 0px 0px;
+	}
+	
+	.dataBar .content .img{
+		float:left;
+		height:370px;
+		width:250px;
+	}
+	
+	.dataBar .content .info{
+		float:left;
+		width:450px;
+		height:240px;
+		margin-left:50px;
+		list-style:none;
+	}
+	
+	.dataBar .content .buyer {
+		float:left;
+		width:430px;
+		height:100px;
+		background-color:#FFF1EE;
+		/*top right bottom left */
+		margin:0px 0px 10px 0px;
+		/*top right bottom left */
+		padding:10px 0px 10px 20px;
+	}
+	
+	.dataBar .content .info li{
+		float:left;
+		
+		width:450px;
+		height:20px;
+
+		text-align:left;
+		margin-top:10px;
+	}
+	
+	.dataBar .content .info li .label{
+		float:left;
+		width:70px;
+	}
+	
+	.dataBar .content .info li .data{
+		float:left;
+		width:80px;
+	}
+	.dataBar .content .info li .author
+	{
+		width:190px;
+	}
+	.dataBar .content .info li .publisher,
+	.dataBar .content .info li .isbn
+	{
+		width:120px;
+	}
+	
+	.dataBar .content .info li .price{
+		font-size:18px;
+		font-weight:bold;
+		font-family:Verdana, Geneva, sans-serif;
+		color:#F30;
+	}
+	
+	.dataBar .content .info li .discount{
+		color:#F30;
+	}
+	
+	.dataBar .content .info li .store{
+		font-weight:bold;
+	}
+	
+	
+	.dataBar .buyer .txt{
+		position:relative;
+		/*top right bottom left */
+		margin:20px 0px 0px 0px;
+		height:20px;
+		
+		line-height:20px;
+		text-align:left;
+
+	}
+	
+	.dataBar .buyer .btn{
+		position:relative;
+		/*top right bottom left */
+		margin:10px 0px 0px 0px;
+		height:40px;
+		
+		text-align:left;
+	}
+	
+	
+	/*bookdetailbar*/
+	.bookDetailBar {
+		position:relative;
+		
+		width:750px;
+		height:auto;
+		
+		margin:auto;
+		margin-top:20px;
+		
+	}
+	
+	.bookDetailBar .title {
+		position:relative;
+		
+		width:740px;
+		*width:750px;
+		height:30px;
+		line-height:30px;
+		padding:0px 0px 0px 10px;
+		
+		background-color:#CCC;
+		font-size:14px;
+	}
+	
+	.bookDetailBar .content {
+		position:relative;
+
+		width:710px;
+		*width:750px;
+		height:auto;
+	
+		/*top right bottom left */
+		padding:20px 20px 20px 20px;
+		
+		line-height:28px;
+	}
+	
+	/*bookcommentbar*/
+	.commentsBar {
+		position:relative;
+		margin:auto;
+		margin-top:20px;
+		
+		width:750px;
+		height:auto;
+	}
+	
+	/*title数值图片左圆角*/
+	.commentsBar .title{
+		position:relative;
+		
+		width:750px;
+		height:29px;
+	
+		background:url(../img/list/bg_intro.gif) no-repeat 0px top;
+	}
+	
+	/*span数值图片右圆角,span不属于块层，所以可以产生图片重叠*/
+	.commentsBar .title span{
+		float:left;
+		
+		width:740px;
+
+		height:29px;
+		padding:0px 0px 0px 10px;
+		
+		color:#FFF;
+		font-weight:bold;
+		font-size:14px;
+		line-height:29px;
+		
+		background:url(../img/list/bg_intro.gif) no-repeat right -29px;
+	}
+	
+	.commentsBar .star {
+		position:relative;
+		
+		width:700px;
+		
+		height:60px;
+		/*top right bottom left */
+		padding:20px 0px 0px 50px;
+		/*top right bottom left */
+		margin:10px 0px 0px 0px;
+		
+		background-color:#FFF1EE;
+	}
+	
+	.commentsBar .star h2 {
+		position:relative;
+		
+		width:200px;
+		height:20px;
+		
+		color:black;
+		font-size:14px;
+		font-weight:normal;
+		
+		line-height:14px;
+	}
+	
+	
+	.commentsBar .star span {
+		float:left;
+		
+		width:50px;
+		height:30px;
+		
+		color:#F00;
+		font-size:24px;
+		font-weight:bold;
+		
+		line-height:30px;
+	}
+	
+
+	.commentsBar .star s {
+		float:left;
+		
+		width:200px;
+		height:30px;
+		
+		line-height:30px;
+		text-decoration:none;
+	}
+	
+	.commentsBar .comment {
+		position:relative;
+		
+		margin:auto;
+		width:750px;
+		height:auto;
+
+	}
+	
+	.commentsBar .comment ul{
+		float:left;
+		
+		margin-top:10px;
+		padding-left:50px;
+		
+		width:700px;
+		height:25px;
+		
+		line-height:14px;
+		
+		list-style:none;
+
+		background-color:#E9D1F5;
+	}
+	
+	.commentsBar .comment ul li{
+		float:left;
+		
+		width:750px;
+		height:20px;
+		
+		display:inline;
+		
+		text-align:left;
+		margin-top:5px;
+	}
+	
+	.commentsBar .comment ul .data{
+		float:left;
+		width:80px;
+		
+		display:inline;
+	}
+	
+	.commentsBar .comment ul .date{
+		float:left;
+		width:160px;
+		
+		display:inline;
+	}
+	
+	.commentsBar .comment ul .userstar{
+		float:left;
+		width:160px;
+		
+		display:inline;
+	}
+	
+	.commentsBar .comment ul .label{
+		float:left;
+		width:70px;
+		
+		display:inline;
+	}
+	
+	.commentsBar .comment .content {
+		position:relative;
+
+		width:720px;
+		height:auto;
+
+		line-height:28px;
+		
+		/*top right bottom left */
+		padding:50px 10px 20px 20px;
+		*padding:20px 10px 20px 20px;
+	}
+	
+	
+
+	
+
+	
+

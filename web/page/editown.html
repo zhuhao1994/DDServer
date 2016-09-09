@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>当当网订单管理页面</title>
+<script type="text/javascript" src="js/common.js" charset="gbk"></script>
+<script type="text/javascript" src="js/jquery-1.4.4.js" ></script>
+<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="js/validator.js" charset="gbk"></script>
+<script type="text/javascript" src="js/msg.js" charset="gbk"></script>
+<script type="text/javascript" src="js/editown.js" charset="gbk"></script>
+
+<script type="text/javascript">
+	$(document).ready(
+		function(){
+			$("#txtBirthday").focus(
+			function(){
+				WdatePicker({
+					dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:"#F{$dp.$D('txtBirthday')}"
+				})
+			});
+		}
+	);
+</script>
+
+<style type="text/css" media="screen">
+	@import url("css/global.css");
+	@import url("css/menu.css");
+	@import url("css/editown.css");
+</style>
+</head>
+
+<body>
+	<!-- 公共菜单部分 -->
+    <div id="navigate">
+    	<div id="rang">
+        	<ul class="login">
+                <li>您好,&nbsp;
+                <a href="login.html">登录当当</a>&nbsp;&nbsp;
+                <a href="login.html">退出</a>
+                <a href="#">站内信</a>
+                </li>
+            </ul>
+            <ul class="content">
+            	<li><a href="#">联系我们</a></li>
+                <li><s class="search">&nbsp;</s><a href="#">搜索</a></li>
+                <li><a href="myself.html">我的当当</a></li>
+                <li><a href="orders.html">我的订单</a></li>
+                <li class="sc">
+                    <s class="shoppingCart">&nbsp;</s>
+                    <a href="cart.html">
+                    购物车&nbsp;<span id="mailNumber">(0)</span>
+                    </a>
+                </li>
+                <li>欢迎光临</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="logoBar">
+    	<div id="logo"></div>
+        <div id="circularMenu">
+            <div id="circularMenuTop">网上购物享当当</div>
+            <div id="circularMenuTitle">
+                <ul>
+                    <li><a href="books.html">首页</a></li>
+                    <li><a href="books.html">图书</a></li>
+                    <li><a href="#">百货</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a href="#">促销</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="search">
+            <s class="imgSearch">&nbsp;</s>
+            <input type="text" class="textSeatch" name="search"/>
+            <p class="btnSearch"></p>
+        </div>
+	</div>
+    
+	<div id="menu">
+   	  <div id="rang">
+        	<ul class="items">
+            	<li>小说</li>
+                <li>青春</li>
+                <li>历史</li>
+                <li>心理学</li>
+                <li>保健</li>
+                <li>少儿</li>
+                <li>外语</li>
+                <li class="img">考试<s></s></li>
+                <li>中小学教辅</li>
+                <li>图书畅销榜</li>
+                <li>新书热卖榜</li>
+                <li class="img">特价书<s></s></li>
+                <li>图书畅销</li>
+                <li>所有图书分类</li>
+                <li>精品套装图书</li>
+            </ul>
+  		</div>
+    </div>
+    <!-- 公共菜单部分 -->
+    
+    <div id="editOwn">
+    	<div id="contextMenu">
+        	您现在的位置：<a href="books.html">当当网</a> &gt; <a href="myself.html">我的当当</a> &gt; 编辑个人档案
+        </div>
+        
+        <!-- 左侧订单 -->
+    	<div id="leftMenu">
+        	<ul class="root">
+            	<li><h3>订单管理</h3></li>
+                <li><a href="orders.html">我的订单</a></li>
+                <li><a href="#">订单支付历史</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>我的商品</h3></li>
+                <li><a href="#">已购商品</a></li>
+                <li><a href="#">我的收藏</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>账户管理</h3></li>
+                <li><a href="#">礼券/礼品卡</a></li>
+                <li><a href="#">我的积分</a></li>
+                <li><a href="#">收货地址簿</a></li>
+                <li><a href="#">账户余额</a></li>
+                <li><a href="editown.html"  class="selected">编辑个人档案</a></li>
+                <li><a href="editmail.html">修改E-Mail地址</a></li>
+                <li><a href="editpwd.html">修改密码</a></li>
+                <li><a href="#">手机绑定</a></li>
+                <li><a href="#">站内信息</a></li>
+                <li><a href="#">我的问答</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>我的社区</h3></li>
+                <li><a href="#">我的评论/评价</a></li>
+                <li><a href="#">我的书架</a></li>
+                <li><a href="#">我的关注</a></li>
+                <li><a href="#">我的留言板</a></li>
+                <li><a href="#">我的书签</a></li>
+            </ul>
+            <ul class="root root_top">
+            	<li><h3>二手书交易管理</h3></li>
+           	</ul>
+        </div>
+		
+        <form name="edtiOwnForm" action="editOwn.do" enctype="multipart/form-data">
+   		<div id="pane">
+        	<h3>编辑个人档案 (带<s class="red_star">*</s>号的项目为必填项)</h3>
+            <ul id="own_info">
+            	<li class="big_head">
+                	<span id="img_big_head" class="img_big_head">
+                        <img src="#" width="96px" height="96px" 
+                        id="photo" name="photo" hspace="0" vspace="0" 
+                        onerror="noFind();"
+                        onload="previewImage(this,96,96);"  />
+                    </span>
+                    <span class="upload">
+                    	<b>从您的电脑中上传图片作为头像：(建议尺寸96*96像素，300k以内)</b>
+                        <input type="file" id="file" onchange="preview();" 
+		           			maxlength="200" size="50"/>
+                        <s id="err_photo" class="err_panel"></s>
+                    </span>
+                </li>
+                
+                <li class="component">
+                	<span class="cmp_title">
+                    	<s class="red_star">*</s>真实姓名：
+                    </span>
+                    <span class="cmp_content">
+                    	<input type="text" id="txtName" name="name" 
+                                           class="edti_txt" maxlength="20" />
+						<b id="err_name" class="err_panel"></b>
+                    </span>
+                    
+                </li>
+                
+                <li class="component">
+                	<span class="cmp_title">
+                    	居住地：
+                    </span>
+                    <span class="cmp_content">
+                    	<select id="sltProvince" name="province">
+                        	<option value="000" selected="selected">-请选择-</option>
+                        	<option value="077">安徽</option>
+                            <option value="078">北京</option>
+                            <option value="079">重庆</option>
+                            <option value="080">福建</option>
+                            <option value="081">甘肃</option>
+                            <option value="082">广东</option>
+                            <option value="083">广西</option>
+                            <option value="084">贵州</option>
+                            <option value="085">海南</option>
+                            <option value="086">河北</option>
+                            <option value="087">河南</option>
+                            <option value="088">黑龙江</option>
+                            <option value="089">湖北</option>
+                            <option value="090">湖南</option>
+                            <option value="091">吉林</option>
+                            <option value="092">江苏</option>
+                            <option value="093">江西</option>
+                            <option value="094">辽宁</option>
+                            <option value="095">内蒙古</option>
+                            <option value="096">宁夏</option>
+                            <option value="097">青海</option>
+                            <option value="098">山东</option>
+                            <option value="099">山西</option>
+                            <option value="100">陕西</option>
+                            <option value="101">上海</option>
+                            <option value="102">四川</option>
+                            <option value="103">天津</option>
+                            <option value="104">西藏</option>
+                            <option value="105">新疆</option>
+                            <option value="106">云南</option>
+                            <option value="107">浙江</option>
+                            <option value="108">香港</option>
+                            <option value="109">澳门</option>
+                            <option value="110">台湾</option>
+                        </select>&nbsp;&nbsp;
+                        <select id="sltCity" name="city">
+                        	<option value="000" selected="selected">-请选择-</option>
+                        	<option value="111">浦东新区</option>
+                            <option value="112">闵行区</option>
+                            <option value="113">徐汇区</option>
+                            <option value="114">杨浦区</option>
+                            <option value="115">虹口区</option>
+                            <option value="116">普陀区</option>
+                            <option value="117">宝山区</option>
+                            <option value="118">松江区</option>
+                            <option value="119">黄浦区</option>
+                            <option value="120">长宁区</option>
+                            <option value="121">嘉定区</option>
+                            <option value="122">闸北区</option>
+                            <option value="123">南汇区</option>
+                            <option value="124">青浦区</option>
+                            <option value="125">奉贤区</option>
+                            <option value="126">崇明县</option>
+                            <option value="127">静安区</option>
+                            <option value="128">金山区</option>
+                            <option value="129">卢湾区</option>
+                        </select>
+                    </span>
+                </li>
+				
+                <li class="component">
+                	<span class="cmp_title">
+                    	生日：
+                    </span>
+                    <span class="cmp_content">
+                    	<input type="text" id="txtBirthday" name="birthday" 
+                                           class="edti_txt" maxlength="10" />
+                    	<b id="err_birthday" class="err_panel"></b>
+                    </span>
+                </li>
+				
+                <li class="component">
+                	<span class="cmp_title">
+                    	性别：
+                    </span>
+                    <span class="cmp_content">
+                    	<input type="radio" id="rdoMale" name="sex" value="0" 
+                                            checked="checked"/>
+                        <label for="rdoMale">男</label>
+                        <input type="radio" id="rdoFemale" name="sex" value="1"/>
+                        <label for="rdoFemale">女</label>
+                    </span>
+                </li>
+				
+                <li class="component">
+                	<span class="cmp_title">
+                    	身份：
+                    </span>
+                    <span class="cmp_content">
+                    	<input type="radio" id="rdoStudent" name="identity" 
+                                                 value="0" checked="checked"/>
+                        <label for="rdoStudent">在校学生</label>
+                        <input type="radio" id="rdoTeacher" name="identity" 
+                                                 value="1"/>
+                        <label for="rdoFemale">教师</label>
+                        <input type="radio" id="rdoEmployee" name="identity" 
+                                                 value="2"/>
+                        <label for="rdoEmployee">上班族</label>
+                        <input type="radio" id="rdoFreelance" name="identity" 
+                        						 value="2"/>
+                        <label for="rdoFreelance">自由职业者</label>
+                    </span>
+                </li>
+                
+                <li class="btn">
+                	<input type="submit" value="保存信息修改" name="edit" 
+                           class="edit_btn" onclick="return validateEidt();"/>
+                </li>
+            </ul>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

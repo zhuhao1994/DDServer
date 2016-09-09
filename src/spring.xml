@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<import resource="action.xml" />
+	<import resource="service.xml" />
+	<import resource="dao.xml" />
+
+	<!-- 数据源的作用是操作连接池,按以下配置构建链接池并操作链接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:ORCL"></property>
+		<property name="password" value="Qweasd"></property>
+		<property name="username" value="DangDang"></property>
+		<!-- 链接池的最大连接数为100个，同时支持100个并发访问，同时支持大约10万用户同时在线 -->
+		<property name="maxActive" value="100"></property>
+		<!-- 链接池的最小链接数为30个,当连接池中多个连接未被使用的情况下，连接池有权销毁链接，但是至少保持30个 -->
+		<property name="maxIdle" value="30"></property>
+		<!-- 当连接池中所有链接都被使用的时候，第101个用户必须等待，等待时间超过1000毫秒则连接池抛出异常 -->
+		<property name="maxWait" value="1000"></property>
+	</bean>
+	<!-- 明确告诉Spring如何操作Hibernate -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource"></ref>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<!-- net.sf.ehcache.hibernate.EhCacheProvider -->
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.SingletonEhCacheProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/globalite/dangdang/entity/Customer.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Book.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Customerlevel.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Booktype.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Orders.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Images.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Orderitems.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Bookcomment.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/City.hbm.xml</value>
+				<value>com/globalite/dangdang/entity/Consignmentaddress.hbm.xml
+				</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 配置Spring事务注入 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<!-- 配置Spring的日志通知类 -->
+	<bean id="logAdvice" class="com.globalite.dangdang.advice.LogAdvice"></bean>
+
+	<!-- Spring2.0事务管理配置 -->
+	<aop:config>
+		<!-- 将需要受到事务控制和传导的Service类实施配置 -->
+		<aop:pointcut
+			expression="execution(public * com.globalite.dangdang.service.*.*(..))"
+			id="txServicePointcut" />
+		<!-- 将需要受到事务控制和传导的DAO类实施配置 -->
+		<aop:pointcut expression="execution(public * com.globalite.dangdang.dao.*.*(..))"
+			id="txDaoPointcut" />
+
+		<!-- 将需要受到事务控制和传导的Service类和Service类中受到事务控制和传到的方法规则绑定在一起，实现Spring2.x的事务集成 -->
+		<aop:advisor advice-ref="txServiceAdvice" pointcut-ref="txServicePointcut" />
+		<!-- 将需要受到事务控制和传导的DAO类和DAO类中受到事务控制和传到的方法规则绑定在一起，实现Spring2.x的事务集成 -->
+		<aop:advisor advice-ref="txDaoAdvice" pointcut-ref="txDaoPointcut" />
+
+		<!-- 将需要受到日志控制的DAO类和DAO类中受到日志控制的方法规则绑定在一起，实现Spring2.x的日志集成 -->
+		<aop:advisor advice-ref="logAdvice" pointcut-ref="txDaoPointcut" />
+
+	</aop:config>
+	<!-- 配置每个DAO中哪些方法需要受到事务控制和管理，并且配置事务传到原则，方法支持正则表达式 -->
+	<tx:advice id="txServiceAdvice" transaction-manager="txManager">
+		<!-- PROPAGATION_REQUIRED: 支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。 PROPAGATION_SUPPORTS: 
+			支持当前事务，如果当前没有事务，就以非事务方式执行。 PROPAGATION_MANDATORY: 支持当前事务，如果当前没有事务，就抛出异常。 
+			PROPAGATION_REQUIRES_NEW: 新建事务，如果当前存在事务，把当前事务挂起。 PROPAGATION_NOT_SUPPORTED: 
+			以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。 PROPAGATION_NEVER: 以非事务方式执行，如果当前存在事务，则抛出异常。 -->
+		<tx:attributes>
+			<tx:method name="do*" propagation="REQUIRES_NEW" />
+			<tx:method name="save*" propagation="REQUIRES_NEW" />
+			<tx:method name="update*" propagation="REQUIRES_NEW" />
+			<tx:method name="delete*" propagation="REQUIRES_NEW" />
+
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 配置每个DAO中哪些方法需要受到事务控制和管理，并且配置事务传到原则，方法支持正则表达式 -->
+	<tx:advice id="txDaoAdvice" transaction-manager="txManager">
+		<!-- PROPAGATION_REQUIRED: 支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。 PROPAGATION_SUPPORTS: 
+			支持当前事务，如果当前没有事务，就以非事务方式执行。 PROPAGATION_MANDATORY: 支持当前事务，如果当前没有事务，就抛出异常。 
+			PROPAGATION_REQUIRES_NEW: 新建事务，如果当前存在事务，把当前事务挂起。 PROPAGATION_NOT_SUPPORTED: 
+			以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。 PROPAGATION_NEVER: 以非事务方式执行，如果当前存在事务，则抛出异常。 -->
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- Spring1.x 将配置好的事务绑定到特定DAO上 -->
+	<!-- <bean id="txCustomerDao" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"> 
+		<property name="target"> <ref bean="customerDao"></ref> </property> <property 
+		name="transactionManager"> <ref bean="txManager"></ref> </property> <property 
+		name="transactionAttributes"> <props> <prop key="saveCustomer">PROPAGATION_REQUIRED</prop> 
+		<prop key="updateCustomer">PROPAGATION_REQUIRED</prop> <prop key="updatePassword">PROPAGATION_REQUIRED</prop> 
+		<prop key="updateEMail">PROPAGATION_REQUIRED</prop> </props> </property> 
+		</bean> -->
+</beans>

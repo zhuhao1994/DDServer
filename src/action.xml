@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<import resource="service.xml"/>
+	<import resource="dao.xml"/>
+	<bean id="editMailAcion" class="com.globalite.dangdang.struts2.action.EditMailAction"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="dao">
+			<ref bean="customerDao" />
+		</property>
+	</bean>
+	<bean id="editPasswordAction"
+		class="com.globalite.dangdang.struts2.action.EditPasswordAction"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="dao">
+			<ref bean="customerDao" />
+		</property>
+	</bean>
+
+	<bean id="cartConfirmAction" name="/cartConfirm"
+		class="com.globalite.dangdang.struts.web.action.CartConfirmAction"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="service">
+			<ref bean="cartService" />
+		</property>
+	</bean>
+	<bean id="editownAction" name="/editown"
+		class="com.globalite.dangdang.struts.web.action.EditownAction"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="service">
+			<ref bean="editownService" />
+		</property>
+		<property name="customerDao">
+			<ref bean="customerDao" />
+		</property>
+	</bean>
+	<bean id="myselfAction" name="/myself"
+		class="com.globalite.dangdang.struts.web.action.MyselfAction"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="dao">
+			<ref bean="ordersDao" />
+		</property>
+	</bean>
+	<bean id="ordersAction" name="/orders"
+		class="com.globalite.dangdang.struts.web.action.OrdersAction"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="dao">
+			<ref bean="ordersDao" />
+		</property>
+	</bean>
+	<bean id="regAction" name="/reg"
+		class="com.globalite.dangdang.struts.web.action.RegAction" abstract="false"
+		lazy-init="default" autowire="default">
+		<property name="dao">
+			<ref bean="customerDao" />
+		</property>
+	</bean>
+</beans>

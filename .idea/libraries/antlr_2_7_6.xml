@@ -1,0 +1,75 @@
+<component name="libraryTable">
+  <library name="antlr-2.7.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/antlr-2.7.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/cart.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/classes12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-collections-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-digester.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-pool.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-validator.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/dwr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ehcache-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/freemarker-2.3.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jakarta-oro.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/javassist-3.9.0.GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/javassist-3.15.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jboss-logging-3.1.0.GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/json-biz.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ognl-2.6.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.aop-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.asm-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.aspects-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.beans-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.context.support-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.context-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.core-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.expression-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.instrument.tomcat-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.instrument-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.jdbc-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.jms-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.orm-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.oxm-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.test-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.transaction-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.web.portlet-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.web.servlet-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.web.struts-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/org.springframework.web-3.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/slf4j-api-1.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/slf4j-api-1.6.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/slf4j-jdk14-1.6.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/slf4j-log4j12-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts2-core-2.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts2-spring-plugin-2.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/xwork-2.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/cart.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/json-biz.jar!/" />
+    </SOURCES>
+  </library>
+</component>
